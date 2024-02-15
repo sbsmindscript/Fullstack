@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #84c14b;
-
+  
 }
 
 .nav-menu .drop-down ul {
@@ -268,8 +268,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu .drop-down:hover > ul {
   opacity: 1;
-  color: #FFF;
-  background-color: #84c14b;
   top: 100%;
   visibility: visible;
 }
