@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/**flex box**/
+.footer{ 
+    width: 100%;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.847);
+    position: absolute;
+    display: flex;
+}
+/*BOX NO 1*/
+.column1{             
+    flex: 1;
+    color: #fff;
+    text-align: center;
+}
+.left-img{
+    padding-left: 80px;
+}
+.left-content{
+    padding-left: 80px;
+    font-size: larger;      /*changes*/
+}
+.left-icons{
+    display: flex;
+    padding-left:200px;     /*changes*/
+    padding-top: 1rem;
+    cursor: pointer;    
+}
+.left-icons a{
+    text-decoration: none;
+    padding: 7px;
+    background-color: #189fd4;
+    margin: 10px;
+    border-radius: 50%;
+}
+.left-icons a:hover{        /*changes*/
+    background-color: #84c14b;
+    transition: 0.3s;
+}
+.left-icons a i{
+    font-size: 2em;
+    color: rgb(2, 1, 1);
+    opacity: 0.9;
+}
+.left-icons a:hover i{
+    color: white;
+    transition: 0.3s;
+}
+
+/*BOX NO 2*/
+.cloumn2{           
+    flex: 1;
+}
+.mid{
+    color: #fff;
+    font-family: Jost, sans-serif;
+}
+.mid-title{
+    text-decoration: underline;
+    color: #84c14b;
+    text-align: center;
+    padding: 30px 30px 10px;     /*changes*/
+    font-size: larger;
+}
+.date-time{
+    line-height: 3.0;           /*changes*/
+    text-align: start;
+}
+
+  /*BOX NO 3*/
+.column3{         
+    flex: 1;
+}
+.right{
+    font-family: Jost, sans-serif;
+   
+}
+.right-title{
+    text-decoration: underline;
+    text-align: center;
+    padding: 30px 30px 20px;
+    font-size: larger;
+    color: #84c14b;
+    font-size: larger;
+}
+.contact-detail{
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+}
+/*bottom footer copyright section*/
