@@ -1,0 +1,355 @@
+.saving{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #FFFFFF;
+  
+  }
+  .saving img{
+    height: auto;
+    width: 100%;
+  }
+  
+  .saving1{
+    width: 100%;
+    padding: 0px 0px;
+    background-color: #FFFFFF;
+  
+  }
+  
+  .saving1 img{
+    height: auto;
+    width: 480px;
+    margin-top: -140px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .saving1-text{
+    width: 1000px;
+    
+  }
+  
+  .main1{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  
+  .saving1-text h1{
+    color: black;
+    font-size: 30px;
+    align-items: center;
+    padding: 0px 25px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    text-decoration: underline;
+    font-family: var(--e-global-typography-primary-font-family),Sans-serif;
+    font-weight: var(--e-global-typography-primary-font-weight);
+  }
+  
+  .saving1-text p{
+    color: #000;
+    letter-spacing: 0px;
+    line-height: 20px;
+    font-family: "Jost",Sans-serif;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    padding: 0px 25px;
+  }
+  
+  body{
+    background: white;
+    font-family: "Jost",Sans-serif;
+  }
+  
+  .mytabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+    padding: 25px;
+    border: 1px solid black;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .mytabs input[type="radio"] {
+    display: none;
+  }
+  
+  .mytabs label{
+    padding: 5px;
+    background: lightgrey;
+    font-weight: bold;
+    border: 1px solid black;
+  }
+  
+  .mytabs .tab{
+    width: 100%;
+    padding: 20px;
+    background: white;
+    order: 1;
+    display: none;
+    
+  }
+  
+  .mytabs input[type='radio']:checked + label + .tab{
+    display: block;
+  }
+  
+  .mytabs input[type="radio"]:checked + label {
+    background: white;
+  }
+  
+  #btn1{
+    background: rgb(116, 189, 6);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: var(--e-global-typography-primary-font-weight);
+    padding: 7px 15px;
+    border-radius: 0px;
+    transition: .4s;
+    position: relative;
+    top: -40px;
+    left: 50px;
+    
+    
+  }
+  
+  #btn1:hover{
+    background: #000;
+    color: rgb(116, 189, 6);
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  div#push {
+    height: 40px;
+    }
+  
+    .current{
+      width: 100%;
+      padding: 78px 0px;
+      background-color: #FFFFFF;
+  
+  }
+  
+  .current img{
+      height: auto;
+      width: 100%;
+  }
+  
+  .current1{
+      width: 100%;
+      padding: 0px 0px;
+      background-color: #FFFFFF;
+  
+  }
+  
+  .current1 img{
+      height: auto;
+      width: 480px;
+      margin-top: 90px;
+      margin-bottom: 20px;
+      
+  }
+  
+  .current1-text{
+      width: 1000px;
+      
+  }
+  
+  .main3{
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
+  }
+  
+  .current1-text h2{
+      color: black;
+      font-size: 30px;
+      align-items: center;
+      padding: 0px 25px;
+      margin-top: -300px;
+      margin-bottom: -10px;
+      text-decoration: underline;
+      font-family: var(--e-global-typography-primary-font-family),Sans-serif;
+      font-weight: var(--e-global-typography-primary-font-weight);
+  }
+  
+  .current1-text p{
+      color: #000;
+      letter-spacing: 0px;
+      line-height: 20px;
+      font-family: "Jost",Sans-serif;
+      font-size: 16px;
+      margin-top: 25px;
+      margin-bottom: 45px;
+      padding: 0px 25px;
+  }
+  #btn2{
+    background: rgb(116, 189, 6);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: var(--e-global-typography-primary-font-weight);
+    padding: 7px 15px;
+    border-radius: 0px;
+    transition: .4s;
+    position: relative;
+    top: 440px;
+    left: 30px;
+    
+    
+  }
+  
+  #btn2:hover{
+    background: #000;
+    color: rgb(116, 189, 6);
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  div#push1 {
+    height: 130px;
+    }
+  
+  .deposit{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #FFFFFF;
+  
+  }
+  
+  .deposit img{
+    height: auto;
+    width: 100%;
+  }
+  
+  .deposit1{
+    width: 100%;
+    padding: 0px 0px;
+    background-color: #FFFFFF;
+  
+  }
+  
+  .deposit1 img{
+    height: auto;
+    max-width: 48%;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    float: right;
+    border: 1px solid #000;
+    
+  }
+  
+  .deposit1-text{
+    width: 1000px;
+    
+  }
+  
+  .main5{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  
+  .deposit1-text h3{
+    color: black;
+    font-size: 30px;
+    align-items: center;
+    padding: 0px 0px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-decoration: underline;
+    font-family: var(--e-global-typography-primary-font-family),Sans-serif;
+    font-weight: var(--e-global-typography-primary-font-weight);
+  }
+  
+  .deposit1-text p{
+    color: #000;
+    letter-spacing: 0px;
+    line-height: 20px;
+    font-family: "Jost",Sans-serif;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    padding: 0px 0px;
+  }
+  
+  .deposit2{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #FFFFFF;
+  
+  }
+  
+  .deposit2 img{
+    height: auto;
+    width: 100%;
+  }
+  
+  .deposit2-text{
+    width: 1000px;
+  }
+  
+  .main6{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .deposit2-text p{
+    color: #000;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: "Jost",Sans-serif;
+    font-size: 25px;
+    margin-top: 250px;
+    margin-bottom: 45px;
+    padding: 0px 0px;
+    
+  }
+  
+  #btn3{
+    background: rgb(116, 189, 6);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: var(--e-global-typography-primary-font-weight);
+    padding: 7px 15px;
+    border-radius: 0px;
+    transition: .4s;
+    position: relative;
+    top: 50px;
+    left: 500px;
+    
+    
+  }
+  
+  #btn3:hover{
+    background: #000;
+    color: rgb(116, 189, 6);
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  div#push2 {
+    height: 40px;
+    }
