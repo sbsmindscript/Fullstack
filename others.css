@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .neft, .rtgs {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .sms, .locker {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .sms-box, .locker-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+  }
