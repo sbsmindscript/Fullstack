@@ -70,7 +70,7 @@
   .mytabs{
     display: flex;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 4600px;
     margin-top: -50px;
     margin-bottom: -20px;
     padding: 25px;
@@ -237,7 +237,7 @@
     width: 100%;
   }
   
-  .deposit1{
+  /* .deposit1{
     width: 100%;
     padding: 0px 0px;
     background-color: #FFFFFF;
@@ -257,8 +257,8 @@
   .deposit1-text{
     width: 1000px;
     
-  }
-  
+  } */
+/*   
   .main5{
     width: 1200px;
     max-width: 100%;
@@ -289,9 +289,9 @@
     margin-top: 25px;
     margin-bottom: 45px;
     padding: 0px 0px;
-  }
+  } */
   
-  .deposit2{
+  /* .deposit2{
     width: 100%;
     padding: 78px 0px;
     background-color: #FFFFFF;
@@ -325,7 +325,7 @@
     margin-bottom: 45px;
     padding: 0px 0px;
     
-  }
+  } */
   
   #btn3{
     background: rgb(116, 189, 6);
@@ -336,10 +336,8 @@
     padding: 7px 15px;
     border-radius: 0px;
     transition: .4s;
-    position: relative;
     top: 50px;
-    left: 500px;
-    
+    left: 500px;  
     
   }
   
