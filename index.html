@@ -12,23 +12,18 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="images/favicon.webp" rel="icon">
-    <link rel="stylesheet" href="smbg.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="para.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/waypoints/jquery.demo.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script> 
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/main.js"></script> 
+    
     <script src="https://use.fontawesome.com/695bb99bf0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
+    <script src="assets/js/counter.js"></script> 
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="images/favicon.webp" rel="icon">
+     <!-- add your footer css -->
+     <link rel="stylesheet" href="smbg.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="para.css">
 
 
     <style type="text/css">
@@ -49,7 +44,7 @@
 .parallax {
   background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(images/parallax.webp);
   min-height: 500px; 
-  background-blend-mode: overlay;
+   background-blend-mode: overlay;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,19 +344,20 @@
 
 </section>
 <br>
- <div class="parallax" style="padding: 8%;">
+
+ <div class="parallax" style="padding: 5%;">
   <div class="col-sm-12">
-    <h1 style="text-align: center;color: #FFF">We Have Great Achievement To Show!!</h1>
+    <h1 style="text-align: center;color: #FFF;padding-top: 5%">We Have Great Achievement To Show!!</h1>
     <!-- add parallax -->
     <div class="row" style="padding-top: 5%">
       <div class="col-sm-3"> 
-        <h2 style="text-align: center; text-align: center;font-size: 50px;color: #FFF;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" data-toggle="counter-up">2014</h2>
+        <h2 style="text-align: center; text-align: center;font-size: 50px;color: #FFF;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="countme">2014</h2>
         <div class="column">
         <p style="text-align: center;color: #FFF">YEAR OF ESTD</p>
         </div>
     </div>
     <div class="col-sm-3">
-      <h3 style="text-align: center;font-size: 50px;color: #FFF;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">99</h3>
+      <h3 class="countme" style="text-align: center;font-size: 50px;color: #FFF;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">99</h3>
       <div class="column">
         <p style="text-align: center;color: #FFF">TOTAL BRANCHES</p>
         </div>
@@ -421,5 +417,6 @@
   <p style="font-size: 20px;">© 2022 Sahayog Multi-State Credit Co-operative Society Ltd. - All rights reserved.</p>
 </div>
  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>  
 </body> 
 </html>
