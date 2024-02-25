@@ -522,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 55px 0;
+  /*padding: 55px 0;*/
 }
 
 .section-bg {
@@ -538,7 +538,7 @@ section {
 } 
  
 .section-bg-3 { 
-  background:#f8a05f url("../img/train.jpg") no-repeat !important; 
+  background:#f8a05f url("../img/rtgss.webp") no-repeat !important; 
   background-size: cover !important;
   background-position: bottom; 
   position:relative;
@@ -978,8 +978,9 @@ content: "";
   /*margin-left: 40px;*/
   font-weight: 400;
   margin-bottom: 15px;
-  font-size: 30px;
-    color: #f9a15f;
+  font-size: 35px;
+  color: #f9a15f;
+  text-align: center;
 }
 
 .services .title a {
