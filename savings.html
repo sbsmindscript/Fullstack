@@ -39,9 +39,61 @@
       color:#FFF;
     }
   </style>
+
+<script type="text/javascript">
+  function save_form(){
+    
+    var name=document.getElementById('first_name').value;
+    var city=document.getElementById('city_name').value;
+
+    if(name==""){
+      alert("Enter Name");
+    }
+    if(city==""){
+      alert("Enter city name");
+    }
+  }
+</script>
+
+<script type="text/javascript">
+
+  function check_dup() {
+  var myname=document.getElementById('first_name').value;
+  console.log(myname);
+
+  if(myname=="akshay"){
+        alert("value already exist");
+        console.log(myname);
+        var myname=document.getElementById('first_name').value="";
+      }
+  }
+</script>
+
+<script type="text/javascript">
+  function check_city(){
+  var myname=document.getElementById('first_name').value;
+  var city=document.getElementById('city_name').value;
+
+  if(myname=="abhishek" && city=="Latur"){
+    alert("Choose diff city name");
+  }
+  else if(myname=="" && city=="Latur"){
+    alert("Enter name first");
+  }
+
+
+  }
+</script>
+
+<!-- <script>
+  function on(){
+    alert("welcome");
+  }
+</script> -->
+
 </head>
 
-<body>
+<body onload="on()">
     <!-- Menu Div -->
     <header id="header" class="fixed-top">
       <div class="container-fluid d-flex align-items-center">
@@ -94,61 +146,11 @@
               <img src="images/11.webp">
               </div>
               </section>
-<!--   
-              <section class="saving1">
-                  <div class="main1">
-                      <img src="/images/12.webp">
-                      <div class="saving1-text">
-                          <h1>SAVINGS ACCOUNT</h1>
-                          <p>It is an essential service of the banking institution. The account holder gets the security of his deposit and civil interest on the money. Savings account of Sahyog Multi State Credit Co-op. Society Ltd. can be started with minimum Rs.100/- (Normal Savings Account) & Rs.1000/- (Silver Savings Account). The institution pays interest at 6% per annum on the savings account.</p>
-                          <div class="mytabs">
-                            <input type="radio" id="tabmb" name="mytabs" checked="checked">
-                            <label for="tabmb">Minimum Balance</label>
-                            <div class="tab">
-                                <p>Account holder is required to maintain minimum 
-                                <br>
-                                    NORMAL SAVINGS ACCOUNT
-                                <br>
-                                    Minimum Account Balance – ₹100/-
-                                <br>
-                                    Rate of Interest – 6%
-                                <br>
-                                    SILVER SAVINGS ACCOUNT
-                                    Minimum Balance – ₹1000/-
-                                    Rate of Interest – 6% (Paid on monthly basis)</p>
-                            </div>
-
-                            <input type="radio" id="tabfacility" name="mytabs">
-                            <label for="tabfacility">facilities</label>
-                            <div class="tab">
-                                <p>Facilities under Silver Savings Account:
-                                <br>
-                                    Monthly Interest Paid on Current Account
-                                    <br>
-                                    Cheque Book Facility
-                                    <br>
-                                    Free SMS Alert
-                                    <br>
-                                    UPI & QR Code Facility
-                                    <br>
-                                    Zero Cash Handling charges
-                                    <br>
-                                    Mobile Banking Services   (a) Account Summary (b) 24×7 Online Transaction        (c) E-statement Facility
-                                    <br>
-                                    No limit on withdrawal & deposit
-                                    <br>
-                                    Dedicated Relationship Officer (RO)</p>
-                            </div>
-
-                          </div>
-                          <button id='btn1' type="button">Contact for More Info</button>  
-                      </div>
-                      </div>
-                      </section> -->
 <div class="row">
   <div class="col-sm-6">
     <img src="images/12.webp" style="width: 100%; height:auto">
   </div>
+
   <div class="col-sm-6">
     <div class="row-sm-6" style="text-align: center;">
       <h1>SAVINGS ACCOUNT</h1>
@@ -156,46 +158,54 @@
     </div>
     <br>
     <br>
-    <div class="row-sm-6">
-      <div class="mytabs">
-        <input type="radio" id="tabmb" name="mytabs" checked="checked">
-        <label for="tabmb">Minimum Balance</label>
+
+<div class="row-sm-6">
+  <div class="mytabs">
+    <input type="radio" id="tabmb" name="mytabs" checked="checked">
+      <label for="tabmb">Minimum Balance</label>
         <div class="tab">
-            <p>Account holder is required to maintain minimum 
-            <br>
-                NORMAL SAVINGS ACCOUNT
-            <br>
-                Minimum Account Balance – ₹100/-
-            <br>
-                Rate of Interest – 6%
-            <br>
-                SILVER SAVINGS ACCOUNT
-                <br>
-                Minimum Balance – ₹1000/-
-                Rate of Interest – 6% (Paid on monthly basis)</p></div>
-                <input type="radio" id="tabfacility" name="mytabs">
-                            <label for="tabfacility">facilities</label>
-                            <div class="tab">
-                                <p>Facilities under Silver Savings Account:
-                                <br>
-                                    Monthly Interest Paid on Current Account
-                                    <br>
-                                    Cheque Book Facility
-                                    <br>
-                                    Free SMS Alert
-                                    <br>
-                                    UPI & QR Code Facility
-                                    <br>
-                                    Zero Cash Handling charges
-                                    <br>
-                                    Mobile Banking Services   (a) Account Summary (b) 24×7 Online Transaction        (c) E-statement Facility
-                                    <br>
-                                    No limit on withdrawal & deposit
-                                    <br>
-                                    Dedicated Relationship Officer (RO)</p>
-                            </div>
-  </div>
+        <p>Account holder is required to maintain minimum 
+        <br>
+        NORMAL SAVINGS ACCOUNT
+        <br>
+        Minimum Account Balance – ₹100/-
+        <br>
+        Rate of Interest – 6%
+        <br>
+        SILVER SAVINGS ACCOUNT
+          <br>
+        Minimum Balance – ₹1000/-
+        Rate of Interest – 6% (Paid on monthly basis)</p></div>
+        
+        <input type="radio" id="tabfacility" name="mytabs">
+       <label for="tabfacility">Open Saving Account</label>
+         <div class="tab">
+            <form class="form-group">
+              <span>Enter First Name</span>
+              <input type="text" name="first_name" id="first_name" class="form-control" onkeyup="check_dup()"><br>
+
+              <span>City</span>
+              <select class="form-control" id="city_name" onchange="check_city()">
+                <option value="" selected="" disabled="">Select City</option>
+                <option value="Jalna">Jalna</option>
+                <option value="Latur">Latur</option>
+              </select>
+              <br>
+              <span>Address</span>
+              <textarea cols="3" required="" rows="3" class="form-control"></textarea>
+              <br>
+              <span>Upload Profile Photo</span>
+              <input type="file" required="" class="form-control">
+              <br>
+              <button type="button" name="save" class="btn btn-warning btn btn-lg" onclick="save_form()">Save Form</button>
+            </form>
+            </div>               
+        </div>
     </div>
+  <!-- col-sm-6 closed -->
+    
+    </div>
+
     <div class="row-sm-6">
       <button id='btn1' type="button">Contact for More Info</button>  
     </div>
