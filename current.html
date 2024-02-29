@@ -130,7 +130,7 @@
       <img src="images/13.webp" style="width: 100%" />
     </div>
 
-    <div class="row" style="margin-top: 50px">
+    <div class="row" style="margin-top: 50px;">
       <div class="col-sm-6">
         <img src="images/14.webp" style="width: 100%; height: 720px;display: flex; padding-left: 70px; padding-top: 120px;" />
       </div>
@@ -169,21 +169,50 @@
                 </ul>
               </p>
             </div>
-            <input type="radio" id="tabfacility" name="mytabs" />
-            <label for="tabfacility">Why Choose Us?</label>
+            <input type="radio" id="tabfacility" name="mytabs"  style="overflow: auto;"/>
+            <label for="tabfacility">Open Current Account</label>
             <div class="tab">
-              <p>
-                <ul>
-                  <li>Monthly Interest Paid on Current Account</li>
-                  <li>No charges on NEFT & RTGS</li>
-                  <li>Cheque Book Facility</li>
-                  <li>Free SMS Alert</li>
-                  <li>UPI & QR Code Facility</li>
-                  <li>Zero Cash Handling charges</li>
-                  <li>Mobile Banking Services   (a) Account Summary (b) 24×7 Online Transaction (c) E-statement Facility</li>
-                </ul>
-              </p>
-            </div>
+              <form class="form-group" style="line-height: 3rem;">
+                <span>Enter Business Name</span>
+                <input type="text" name="business_name" id="business_name" class="form-control" placeholder="Enter Business Name" oninput="valid_name(this)"><br>
+                <span>Business Category : </span>
+                <select name="business_category" id="business_category" onchange="select_category()">
+                  <option id="business_category" value="select">select</option><hr>
+                  <option id="business_category" value="manufacturing">Manufacturing</option>
+                  <option id="business_category" value="service">Service</option>
+                </select>
+                <br><br>
+                <span>Business PAN/CIN/Udyam Number : </span>
+                <select name="business_number" id="business_number">
+                  <option value="select">Select</option><hr>
+                  <option id="business_number" value="pan">PAN</option>
+                  <option id="business_number" value="pan">CIN</option>
+                  <option id="business_number" value="pan">Udyam Number</option>
+                </select>
+                <input type="text" name="business_number" id="business_number" class="form-control" placeholder="Enter Your PAN/CIN/Udyam Number" oninput="valid_name(this)">
+                <br>
+                <span>Owner Full Name</span>
+                <input type="text" name="owner_name" id="owner_name" class="form-control" placeholder="Enter Owner Full Name" oninput="valid_name(this)"><br>
+                <span>Owner PAN Number</span>
+                <input type="text" name="owner_pan" id="owner_pan" class="form-control" placeholder="Enter Owner PAN Number" oninput="valid_name(this)"><br>
+                <span>Owner Aadhar Number</span>
+                <input type="number" name="owner_aadhar" id="owner_aadhar" class="form-control" placeholder="Enter Aadhar Number" oninput="valid_name(this)"><br>
+        
+                <span>GP/MC No Objection Certificate</span>
+                <input type="file" name="gp_mcp_noObj_certificate" id="gp_mcp_noObj_certificate" class="form-control">
+                <br>
+                <span>Upload Owner Profile Photo</span>
+                <input type="file" name="profile_photo" id="profile_photo" class="form-control">
+                <br>
+                <span>Required Available Services : </span>
+                <input type="checkbox" name="servies" id="services" value="cheque_book">
+                <span for="cheque_book">Cheque Book</span>
+                <input type="checkbox" name="servies" id="services" value="atm_card">
+                <span for="atm_card">ATM Card</span>
+                <input type="checkbox" name="servies" id="services" value="credit_card">
+                <span for="credit_card">Credit Card</span>
+              </form>
+              </div>   
           </div>
         </div>
         <br>
@@ -249,6 +278,7 @@
       </p>
     </div>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/current_acc.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
