@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="alert alert-primary text-center">
+                    CRUD Practice With Javascript and Localstorage
+                </h1>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="form">
+                            <input type="hidden" name="id" id="id">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Name" class="form-control" name="name" id="name" required>
+                            <br>
+                            <label for="">Age</label>
+                            <input type="number" placeholder="Age" class="form-control" name="age" id="age" required>
+                            <br>
+                            <label for="">Address</label>
+                            <textarea name="address" placeholder="Address" id="address" cols="30" rows="5" required class="form-control"></textarea>
+                            <br>
+                            <label for="">Phone</label>
+                            <input type="text" placeholder="Phone" class="form-control" id="phone" name="phone" required>
+                            <br>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Edit</th>
+                                        <th>Hapus</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table">
+        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="all_data.js"></script>
+    <script src="save.js"></script>
+    <script src="find.js"></script>
+    <script src="remove.js"></script>
+    <script>
+        allData()
+    </script>
+    <script>
+        function clearData(){
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
+  </body>
+</html>
