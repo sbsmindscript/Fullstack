@@ -146,85 +146,254 @@
               <img src="images/11.webp">
               </div>
               </section>
+<div class="container-fluid">
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-12 col-lg-6 col-12">
     <img src="images/12.webp" style="width: 100%; height:auto">
   </div>
 
-  <div class="col-sm-6">
-    <div class="row-sm-6" style="text-align: center;">
+  <div class="col-sm-12 col-lg-6 col-12">
+    <div class="row-sm-6" style="text-align: center; margin-top: 30px;">
       <h1>SAVINGS ACCOUNT</h1>
       <p>It is an essential service of the banking institution. The account holder gets the security of his deposit and civil interest on the money. Savings account of Sahyog Multi State Credit Co-op. Society Ltd. can be started with minimum Rs.100/- (Normal Savings Account) & Rs.1000/- (Silver Savings Account). The institution pays interest at 6% per annum on the savings account.</p>
     </div>
-    <br>
-    <br>
 
-<div class="row-sm-6">
-  <div class="mytabs">
-    <input type="radio" id="tabmb" name="mytabs" checked="checked">
-      <label for="tabmb">Minimum Balance</label>
-        <div class="tab">
-        <p>Account holder is required to maintain minimum 
-        <br>
-        NORMAL SAVINGS ACCOUNT
-        <br>
-        Minimum Account Balance – ₹100/-
-        <br>
-        Rate of Interest – 6%
-        <br>
-        SILVER SAVINGS ACCOUNT
-          <br>
-        Minimum Balance – ₹1000/-
-        Rate of Interest – 6% (Paid on monthly basis)</p></div>
-        
-        <input type="radio" id="tabfacility" name="mytabs">
-       <label for="tabfacility">Open Saving Account</label>
-         <div class="tab">
-            <form class="form-group">
-              <span>Enter First Name</span>
-              <input type="text" name="first_name" id="first_name" class="form-control" onkeyup="check_dup()"><br>
-
-              <span>City</span>
-              <select class="form-control" id="city_name" onchange="check_city()">
-                <option value="" selected="" disabled="">Select City</option>
-                <option value="Jalna">Jalna</option>
-                <option value="Latur">Latur</option>
-              </select>
+   <!-- <div class="row-sm-6">
+      <div class="mytabs">
+        <input type="radio" id="tabmb" name="mytabs" checked="checked">
+          <label for="tabmb">Minimum Balance</label>
+            <div class="tab">
+            <p>Account holder is required to maintain minimum 
+            <br>
+            NORMAL SAVINGS ACCOUNT
+            <br>
+            Minimum Account Balance – ₹100/-
+            <br>
+            Rate of Interest – 6%
+            <br>
+            SILVER SAVINGS ACCOUNT
               <br>
-              <span>Address</span>
-              <textarea cols="3" required="" rows="3" class="form-control"></textarea>
-              <br>
-              <span>Upload Profile Photo</span>
-              <input type="file" required="" class="form-control">
-              <br>
-              <button type="button" name="save" class="btn btn-warning btn btn-lg" onclick="save_form()">Save Form</button>
-            </form>
-            </div>               
-        </div>
-    </div>
-  <!-- col-sm-6 closed -->
+            Minimum Balance – ₹1000/-
+            Rate of Interest – 6% (Paid on monthly basis)</p></div>
+            
+            <input type="radio" id="tabfacility" name="mytabs">
+           <label for="tabfacility">Open Saving Account</label>
+             <div class="tab">
+                <form class="form-group">
+                  <span>Enter First Name</span>
+                  <input type="text" name="first_name" id="first_name" class="form-control" onkeyup="check_dup()"><br>
     
-    </div>
+                  <span>City</span>
+                  <select class="form-control" id="city_name" onchange="check_city()">
+                    <option value="" selected="" disabled="">Select City</option>
+                    <option value="Jalna">Jalna</option>
+                    <option value="Latur">Latur</option>
+                  </select>
+                  <br>
+                  <span>Address</span>
+                  <textarea cols="3" required="" rows="3" class="form-control"></textarea>
+                  <br>
+                  <span>Upload Profile Photo</span>
+                  <input type="file" required="" class="form-control">
+                  <br>
+                  <button type="button" name="save" class="btn btn-warning btn btn-lg" onclick="save_form()">Save Form</button>
+                </form>
+                </div>               
+            </div>
+        </div> -->
+      <!-- col-sm-6 closed -->
 
-    <div class="row-sm-6">
-      <button id='btn1' type="button">Contact for More Info</button>  
-    </div>
+
+
+      <div class="container-fluid">
+        <div class="border border-success p-2 mb-2">
+      <ul class="nav nav-tabs border border-success">
+        <li class="active"><a data-toggle="tab" href="#home">Minimum Balance</a></li>
+        <li><a data-toggle="tab" href="#menu1">Facilities</a></li>
+        <li><a data-toggle="tab" href="#menu2">Apply for Saving Account</a></li>
+        
+      </ul>
+    
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <p>Account holder is required to maintain minimum 
+          <p class="font-weight-bold">NORMAL SAVINGS ACCOUNT</p>
+            <br>
+            Minimum Account Balance – ₹100/-
+            <br>
+            <br>
+            Rate of Interest – 6%
+            <br>
+            <p class="font-weight-bold">SILVER SAVINGS ACCOUNT</p>
+            <br>
+            Minimum Balance – ₹1000/- 
+            <br>
+            Rate of Interest – 6% (Paid on monthly basis)</p>
+        </div>
+        
+        <div id="menu1" class="tab-pane fade">
+          <ulclass="text-left" style="display:inline-block;vertical-align:middle;">
+          <h3>Facilities under Silver Savings Account:</h3>
+          <li>Interest Paid on Current Account</li> 
+            <li>Cheque Book Facility</li>
+            <li>Free SMS Alert</li>
+            <li>UPI & QR Code Facility</li>
+            <li>Zero Cash Handling charges</li>
+            <li>Mobile Banking Services <br>  (a) Account Summary <br> (b) 24×7 Online Transaction <br> (c) E-statement Facility</li>
+            <li>No limit on withdrawal & deposit</li>
+            <li>Dedicated Relationship Officer (RO)</li>
+          </ul>
+          <br>
+
+        </div>
+      
+        <div id="menu2" class="tab-pane fade">
+          <div class="container-fluid">
+          <form>
+             <div class="form-group row">
+              <label for="inputFirstName" class="col-sm-3 col-form-label">First Name</label>
+              <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="First name" requiired> 
+              </div>
+
+              <label for="inputMiddleName" class="col-sm-4 col-form-label">Middle Name</label>
+              <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Middle name" requiired> 
+              </div>
+
+              <label for="inputLastName" class="col-sm-3 col-form-label">Last Name</label>
+              <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Last name" requiired> 
+              </div>
+        
+              
+              <label for="mobileNumber" class="col-sm-4 col-form-label">Mo. No.</label>
+              <div class="col-md-12">
+              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" required>
+              </div>
+              
+              <label for="dob" class="col-sm-4 col-form-label">DOB</label>
+              <div class="col-md-12">
+              <input type="date" class="form-control" id="dob" required>
+              </div>
+              
+
+                <label for="gender" class="col-sm-4 col-form-label">Gender</label>
+                <div class="col-md-12">
+                <select class="form-control" id="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                </select>
+                </div>
+
+                
+                <label for="nationality" class="col-sm-3 col-form-label">Nationality</label> 
+                <div class="col-md-12">
+                <input type="text" class="form-control" id="nationality" placeholder="Enter nationality" required>
+                </div>
+                
+                <label for="countryName" class="col-sm-4 col-form-label">Country Name</label> 
+                <div class="col-md-12">
+                <input type="text" class="form-control" id="countryName" placeholder="Enter country name" required>
+                </div>
+
+                <label for="idProof" class="col-sm-3 col-form-label">ID Proof</label>
+                <div class="col-md-12">
+                <select class="form-control" id="idProof" required>
+                <option value="">Select ID Proof</option>
+                <option value="aadhar">Aadhar Card</option>
+                <option value="aadhar">Pan Card</option>
+                <option value="voterId">Voter ID</option>
+                </select>
+                </div>
+
+                <label for="address" class="col-sm-4 col-form-label">Address</label> 
+                <div class="col-md-12">
+                <input type="text" class="form-control" id="address" placeholder="Enter address" required>
+                </div>
+
+                <label for="pincode" class="col-sm-4 col-form-label">Pin Code</label> 
+                <div class="col-md-12">
+                <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode" required>
+                </div>
+
+                <label class="col-sm-4 col-form-label" for="fileUpload">Profile Photo</label>
+                <div class="col-md-12">
+                <input type="file" class="form-control" id="fileUpload"/>
+                </div>
+
+                <label for="requiredServices" class="col-sm-6 col-form-label">Required Services</label>
+                <div class="col-md-12">
+                <select class="form-control" id="requiredServices" required>
+                <option value="">Select Services</option>
+                <option value="cheque">Cheque Book</option>
+                <option value="atm">ATM Card</option>
+                <option value="pass">Pass Book</option>
+                <option value="sms">SMS Alert</option>
+                <option value="mobile">Mobile Banking</option>
+                </select>
+                </div>
+
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" requiired>
+                <label class="form-check-label col-sm-4" for="flexCheckDefault">Declaration</label>
+              </div>
+               <p class="col-md-12">
+                      1. I have read the copy of Terms and Conditions of the Account Opening Form given to me. The Terms and Conditions have been explained to me/us and having understood, I accept the same.
+                      <br> 
+                      <br>
+                      2. I hereby declare that I have submitted the Aadhaar Card issued by UIDAI voluntarily for identification and /or address proof towards the compliance of KYC norms under the PMLA, 2002 
+                      <br>
+                      <br> 
+                      3. I hereby consent that the Bank may verify the same with the UIDAI and authorize the UIDAI expressly to release the identity and address
+                    </p>  
+                    <div class="container">
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    </div>
+</div>
+                
+</div>
+              
+</div> 
+
+</form>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+  </div>
+</div>
+</div>
+</div>
+<div class="container"> 
+  <div class="text-center">
+  <button type="button" class="btn btn-success"> <span class="glyphicon glyphicon-earphone"></span>
+    Contact for More Info 
+  </button> 
+</div>
   </div>
   </div>
   <div id="push"></div>
 <!-- footer area-->
 <footer>
-  <div class="container">
-  <div class="foot-social col-sm-4">
-      <img src="images/footer.png" alt="logo"><br>
-      <p style="font-size: 20px;">Connect with us on below social<br> media account!</p><br>
+  <div class="container"><div class="row">
+    <div class="foot-social col-12 col-sm-12 col-lg-4">
+      <img src="smbg-img/Sahayog-Multistate-Website-Logo-3.png" alt="logo"><br>
+      <p style="font-size: 20px;">Connect with us on below social<br> media account!</p>
+      <br>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-twitter"></i>
       <i class="fa-brands fa-youtube"></i>
       <i class="fa-brands fa-instagram"></i>
 
   </div>
-  <div class="foot-time col-sm-4">
+  <div class="foot-time col-12 col-sm-12 col-lg-4">
     <h3 style="font-family: sans-serif;">Working Hours</h3>
     <span>Monday-Friday:<br>
       10:00am - 06:00pm</span><br><br>
@@ -232,22 +401,23 @@
       10:00am - 04:00pm</span>  
   </div>
 
-  <div class="foot-contact col-sm-4" style="line-height: 1.2;">
+  <div class="foot-contact col-12 col-sm-12 col-lg-4">
     <h3 style="font-family: sans-serif;">Contact Us</h3>
-    <span><i class="fa-solid fa-map" style="color: #84c14b;"></i> Shri Ji Complex, Gayatri Mandir Road, Opp. Bisen Petrol Pump, Gondia, Maharashtra - 441614</span>
+    <span><i class="fa-solid fa-map"></i> Shri Ji Complex, Gayatri Mandir Road, Opp. Bisen Petrol Pump, Gondia, Maharashtra - 441614</span>
     <br><br>
-    <span><i class="fa-solid fa-phone" style="color: #84c14b;"></i>  (0761) 654-123987</span>
+    <span><i class="fa-solid fa-phone"></i>  (0761) 654-123987</span>
     <br><br>
-    <span><i class="fa-solid fa-envelope" style="color: #84c14b;"></i>info@sahayogmultistate.com</span>
+    <span><i class="fa-solid fa-envelope"></i>info@sahayogmultistate.com</span>
   </div>
 </div>
-
-
+  </div>
 </footer>
 <div class="copyrights">
   <p style="font-size: 20px;">© 2022 Sahayog Multi-State Credit Co-operative Society Ltd. - All rights reserved.</p>
 </div>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script> 
+
   </body>
   </html>
