@@ -63,7 +63,7 @@
 
   <body>
     <!-- Menu Div -->
-    <header id="header" class="fixed-top">
+    <header id="header" class="stickey-top">
       <div class="container-fluid d-flex align-items-center">
         <a href="index" class="logo">
           <img src="logo.png" alt="Sahayog Multi-state Logo" class="img-fluid"></a>
@@ -176,19 +176,19 @@
                 <span>Enter Business Name</span>
                 <input type="text" name="business_name" id="business_name" class="form-control" placeholder="Enter Business Name" oninput="valid_name(this)"><br>
                 <span>Business Category : </span>
-                <select name="business_category" id="business_category" onchange="select_category()">
+                <select name="business_category" id="business_category" onchange="select_category()" class="form-control">
                   <option id="business_category" value="select">select</option><hr>
                   <option id="business_category" value="manufacturing">Manufacturing</option>
                   <option id="business_category" value="service">Service</option>
                 </select>
-                <br><br>
+                <br>
                 <span>Business PAN/CIN/Udyam Number : </span>
-                <select name="business_number" id="business_number">
+                <select name="business_number" id="business_number" class="form-control">
                   <option value="select">Select</option><hr>
                   <option id="business_number" value="pan">PAN</option>
                   <option id="business_number" value="pan">CIN</option>
                   <option id="business_number" value="pan">Udyam Number</option>
-                </select>
+                </select><br>
                 <input type="text" name="business_number" id="business_number" class="form-control" placeholder="Enter Your PAN/CIN/Udyam Number" oninput="valid_name(this)">
                 <br>
                 <span>Owner Full Name</span>
