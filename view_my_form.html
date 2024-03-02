@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LocalStorage</title>
+</head>
+<body>
+<h4>LocalStorage is Store temporary data for particular use</h4>
+
+<h5>By LocalStorage we view all the submitted parameter here. Such as first name,last name etc...</h5>
+<p id='one'></p>
+<p id='two'></p>
+<p id='three'></p>
+<p id='four'></p>
+<p id='five'></p>
+<p id='six'></p>
+<button onclick="clearStorage()">Clear Storage</button>
+</body>
+</html>
+
+<script type="text/javascript">
+	
+    var f=localStorage.getItem('fname');
+    document.getElementById('one').innerHTML="First Name is: " +f;
+
+    var mn=localStorage.getItem('mname');
+    document.getElementById('two').innerHTML="Middle Name is: "+mn;
+
+    var ln=localStorage.getItem('lname');
+    document.getElementById('three').innerHTML="Last Name is: "+ln;
+
+    var mb=localStorage.getItem('mob');
+    document.getElementById('four').innerHTML="Contact Number is: "+mb;
+
+    var db=localStorage.getItem('date_of_birth');
+    document.getElementById('five').innerHTML="Date Of Birth is: "+db;
+
+    var ge=localStorage.getItem('gen');
+    document.getElementById('six').innerHTML="Gender is: "+ge;
+
+  function clearStorage() {
+  	alert("LocalStorage is cleared..")
+  localStorage.clear();
+
+  setTimeout(function() {
+  	window.location.href="savings.html";
+  }, 1000);
+}
+</script>

@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahyog Multistate Credit Co-operative Society Limited</title>
+  <title>Sahayog Multistate Credit Co-operative Society Limited</title>
   <!-- Favicons -->
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -40,60 +40,9 @@
     }
   </style>
 
-<script type="text/javascript">
-  function save_form(){
-    
-    var name=document.getElementById('first_name').value;
-    var city=document.getElementById('city_name').value;
-
-    if(name==""){
-      alert("Enter Name");
-    }
-    if(city==""){
-      alert("Enter city name");
-    }
-  }
-</script>
-
-<script type="text/javascript">
-
-  function check_dup() {
-  var myname=document.getElementById('first_name').value;
-  console.log(myname);
-
-  if(myname=="akshay"){
-        alert("value already exist");
-        console.log(myname);
-        var myname=document.getElementById('first_name').value="";
-      }
-  }
-</script>
-
-<script type="text/javascript">
-  function check_city(){
-  var myname=document.getElementById('first_name').value;
-  var city=document.getElementById('city_name').value;
-
-  if(myname=="abhishek" && city=="Latur"){
-    alert("Choose diff city name");
-  }
-  else if(myname=="" && city=="Latur"){
-    alert("Enter name first");
-  }
-
-
-  }
-</script>
-
-<!-- <script>
-  function on(){
-    alert("welcome");
-  }
-</script> -->
-
 </head>
 
-<body onload="on()">
+<body>
     <!-- Menu Div -->
     <header id="header" class="fixed-top">
       <div class="container-fluid d-flex align-items-center">
@@ -141,12 +90,14 @@
     </header>
     <!-- menu div end -->
 
-        <section class="saving">
-          <div class="main">
-              <img src="images/11.webp">
-              </div>
-              </section>
-<div class="container-fluid">
+<div class="container-fluid saving">
+  <div class="main">
+  <img src="images/11.webp">
+  </div>
+</div>
+<div style="clear:both"></div>
+
+<div class="container-fluid" style="margin-top: -65px">
 <div class="row">
   <div class="col-sm-12 col-lg-6 col-12">
     <img src="images/12.webp" style="width: 100%; height:auto">
@@ -157,51 +108,6 @@
       <h1>SAVINGS ACCOUNT</h1>
       <p>It is an essential service of the banking institution. The account holder gets the security of his deposit and civil interest on the money. Savings account of Sahyog Multi State Credit Co-op. Society Ltd. can be started with minimum Rs.100/- (Normal Savings Account) & Rs.1000/- (Silver Savings Account). The institution pays interest at 6% per annum on the savings account.</p>
     </div>
-
-   <!-- <div class="row-sm-6">
-      <div class="mytabs">
-        <input type="radio" id="tabmb" name="mytabs" checked="checked">
-          <label for="tabmb">Minimum Balance</label>
-            <div class="tab">
-            <p>Account holder is required to maintain minimum 
-            <br>
-            NORMAL SAVINGS ACCOUNT
-            <br>
-            Minimum Account Balance – ₹100/-
-            <br>
-            Rate of Interest – 6%
-            <br>
-            SILVER SAVINGS ACCOUNT
-              <br>
-            Minimum Balance – ₹1000/-
-            Rate of Interest – 6% (Paid on monthly basis)</p></div>
-            
-            <input type="radio" id="tabfacility" name="mytabs">
-           <label for="tabfacility">Open Saving Account</label>
-             <div class="tab">
-                <form class="form-group">
-                  <span>Enter First Name</span>
-                  <input type="text" name="first_name" id="first_name" class="form-control" onkeyup="check_dup()"><br>
-    
-                  <span>City</span>
-                  <select class="form-control" id="city_name" onchange="check_city()">
-                    <option value="" selected="" disabled="">Select City</option>
-                    <option value="Jalna">Jalna</option>
-                    <option value="Latur">Latur</option>
-                  </select>
-                  <br>
-                  <span>Address</span>
-                  <textarea cols="3" required="" rows="3" class="form-control"></textarea>
-                  <br>
-                  <span>Upload Profile Photo</span>
-                  <input type="file" required="" class="form-control">
-                  <br>
-                  <button type="button" name="save" class="btn btn-warning btn btn-lg" onclick="save_form()">Save Form</button>
-                </form>
-                </div>               
-            </div>
-        </div> -->
-      <!-- col-sm-6 closed -->
 
 
 
@@ -232,7 +138,7 @@
         </div>
         
         <div id="menu1" class="tab-pane fade">
-          <ulclass="text-left" style="display:inline-block;vertical-align:middle;">
+          <ul class="text-left" style="display:inline-block;vertical-align:middle;">
           <h3>Facilities under Silver Savings Account:</h3>
           <li>Interest Paid on Current Account</li> 
             <li>Cheque Book Facility</li>
@@ -249,27 +155,27 @@
       
         <div id="menu2" class="tab-pane fade">
           <div class="container-fluid">
-          <form>
+          <form class="form-group" method="post">
              <div class="form-group row">
               <label for="inputFirstName" class="col-sm-3 col-form-label">First Name</label>
               <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="First name" requiired> 
+              <input type="text" class="form-control" placeholder="First name" required="" id="first_name"> 
               </div>
 
               <label for="inputMiddleName" class="col-sm-4 col-form-label">Middle Name</label>
               <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Middle name" requiired> 
+              <input type="text" class="form-control" placeholder="Middle name" required id="middle_name"> 
               </div>
 
               <label for="inputLastName" class="col-sm-3 col-form-label">Last Name</label>
               <div class="col-md-12">
-              <input type="text" class="form-control" placeholder="Last name" requiired> 
+              <input type="text" class="form-control" placeholder="Last name" required id="last_name"> 
               </div>
         
               
               <label for="mobileNumber" class="col-sm-4 col-form-label">Mo. No.</label>
               <div class="col-md-12">
-              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" required>
+              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" required name="mobile_number">
               </div>
               
               <label for="dob" class="col-sm-4 col-form-label">DOB</label>
@@ -280,7 +186,7 @@
 
                 <label for="gender" class="col-sm-4 col-form-label">Gender</label>
                 <div class="col-md-12">
-                <select class="form-control" id="gender" required>
+                <select class="form-control" id="gender" required name="gender">
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -291,17 +197,17 @@
                 
                 <label for="nationality" class="col-sm-3 col-form-label">Nationality</label> 
                 <div class="col-md-12">
-                <input type="text" class="form-control" id="nationality" placeholder="Enter nationality" required>
+                <input type="text" class="form-control" id="nationality" placeholder="Enter nationality" required name="nationality">
                 </div>
                 
                 <label for="countryName" class="col-sm-4 col-form-label">Country Name</label> 
                 <div class="col-md-12">
-                <input type="text" class="form-control" id="countryName" placeholder="Enter country name" required>
+                <input type="text" class="form-control" id="countryname" placeholder="Enter country name" required name="countryname">
                 </div>
 
                 <label for="idProof" class="col-sm-3 col-form-label">ID Proof</label>
                 <div class="col-md-12">
-                <select class="form-control" id="idProof" required>
+                <select class="form-control" id="idProof" required name="id_proof">
                 <option value="">Select ID Proof</option>
                 <option value="aadhar">Aadhar Card</option>
                 <option value="aadhar">Pan Card</option>
@@ -311,22 +217,22 @@
 
                 <label for="address" class="col-sm-4 col-form-label">Address</label> 
                 <div class="col-md-12">
-                <input type="text" class="form-control" id="address" placeholder="Enter address" required>
+                <input type="text" class="form-control" id="address" placeholder="Enter address" required name="address">
                 </div>
 
                 <label for="pincode" class="col-sm-4 col-form-label">Pin Code</label> 
                 <div class="col-md-12">
-                <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode" required>
+                <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode" name="pincode" required>
                 </div>
 
                 <label class="col-sm-4 col-form-label" for="fileUpload">Profile Photo</label>
                 <div class="col-md-12">
-                <input type="file" class="form-control" id="fileUpload"/>
+                <input type="file" required="" class="form-control" id="fileUpload"/>
                 </div>
 
                 <label for="requiredServices" class="col-sm-6 col-form-label">Required Services</label>
                 <div class="col-md-12">
-                <select class="form-control" id="requiredServices" required>
+                <select class="form-control" id="requiredServices" name="requiredServices" required>
                 <option value="">Select Services</option>
                 <option value="cheque">Cheque Book</option>
                 <option value="atm">ATM Card</option>
@@ -337,7 +243,7 @@
                 </div>
 
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" requiired>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                 <label class="form-check-label col-sm-4" for="flexCheckDefault">Declaration</label>
               </div>
                <p class="col-md-12">
@@ -351,28 +257,20 @@
                     </p>  
                     <div class="container">
                     <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="view_info()">Submit</button>
                     </div>
                     </div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+    </div>
 </div>
-                
 </div>
-              
-</div> 
+</div>
 
-</form>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-  </div>
-</div>
-</div>
-</div>
 <div class="container"> 
-  <div class="text-center">
+  <div class="text-center"><br>
   <button type="button" class="btn btn-success"> <span class="glyphicon glyphicon-earphone"></span>
     Contact for More Info 
   </button> 
@@ -421,3 +319,52 @@
 
   </body>
   </html>
+
+  <script type="text/javascript">
+  function view_info(){
+    
+    // collect all the form input by get element id and store in variable
+
+    var first_name=document.getElementById('first_name').value;
+
+    var middle_name=document.getElementById('middle_name').value;
+
+    var last_name=document.getElementById('last_name').value;
+
+    var mobileNumber=document.getElementById('mobileNumber').value;
+
+    var dob=document.getElementById('dob').value;
+
+    var gender=document.getElementById('gender').value;
+
+    var nationality=document.getElementById('nationality').value;
+
+    var countryname=document.getElementById('countryname').value;
+
+    var idProof=document.getElementById('idProof').value;
+
+    var address=document.getElementById('address').value;
+
+    var pincode=document.getElementById('pincode').value;
+
+    var address=document.getElementById('address').value;
+
+    var requiredServices=document.getElementById('requiredServices').value;
+
+
+    localStorage.setItem('fname',first_name);
+
+    localStorage.setItem('mname',middle_name);
+
+    localStorage.setItem('lname',last_name);
+
+    localStorage.setItem('mob',mobileNumber);
+
+    localStorage.setItem('date_of_birth',dob);
+
+    localStorage.setItem('gen',gender);
+
+    window.location.href="view_my_form.html";
+
+  }
+</script>
