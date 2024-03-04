@@ -110,10 +110,116 @@
     <!-- menu div end -->
 
     <div class="container-fluid">
-      <img src="images/13.webp" class="img-responsive" style="width: 100%">
+      <img src="images/13.webp" class="img-fluid" style="width: 100%">
     </div>
 
-    <div style="clear: both;"></div>
+    <div class="current-ac container-fluid row">
+      <div class="current-img col-lg-6 ">
+          <img src="images/14.webp" class="d-lg-block d-md-none d-sm-none d-none">
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="row-sm-6" style="margin-top: 20px;">
+          <h1>Current Account</h1>
+          <p>The current Account is another essential service for the business class of the Banking Institute. The account holder's needs are fulfilled in his day-to-day financial dealings. Khatedar can open a current account with Sahayog Multi State Credit Co-op. Society Ltd. for only Rs.4000/-. & Rs.8000/-</p>
+        </div>
+    
+    
+    
+          <div class="container-fluid">
+            <div class="border border-success p-2 mb-2">
+          <ul class="nav nav-tabs border border-success">
+            <li class="active"><a data-toggle="tab" href="#home">Minimum Balance</a></li>
+            <li><a data-toggle="tab" href="#menu1">Why Choose Us ?</a></li>
+            <li><a data-toggle="tab" href="#menu2">Apply for Current Account</a></li>
+            
+          </ul>
+        
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+              <p>Account holder is required to maintain minimum </p><br>
+              <p class="font-weight-bold">GOLD CURRENT ACCOUNT</p>
+                <br>
+                Minimum Opening Balance – ₹4000/- 
+                <br>
+                <br>
+                Monthly Average Balance – ₹2000/- | Interest Rate – 2%
+                <br>
+                <p class="font-weight-bold">WEALTH CURRENT ACCOUNT</p>
+                <br>
+                Minimum Opening Balance – ₹8000/- 
+                <br>
+                Monthly Average Balance – ₹4000/- | Interest Rate – 3%
+            </div>
+            
+            <div id="menu1" class="tab-pane fade">
+              <div class="ul">
+                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                  <!-- <h3>Why Choose Us ?</h3> -->
+                    <li>Monthly Interest Paid on Current Account</li>
+                    <li>No charges on NEFT & RTGS</li>
+                    <li>Cheque Book Facility</li>
+                    <li>Free SMS Alert</li>
+                    <li>UPI & QR Code Facility</li>
+                    <li>Zero Cash Handling charges</li>
+                    <li>Mobile Banking Services   (a) Account Summary (b) 24×7 Online Transaction (c) E-statement Facility</li>
+                  </ul>
+              </div>
+              
+              <br>
+    
+            </div>
+          
+            <div id="menu2" class="tab-pane fade">
+              <div class="container-fluid">
+                <form class="form-group" style="line-height: 3rem;">
+                  <span>Enter Business Name</span>
+                  <input type="text" name="business_name" id="business_name" class="form-control" placeholder="Enter Business Name" oninput="valid_name(this)"><br>
+                  <span>Business Category : </span>
+                  <select name="business_category" id="business_category" onchange="select_category()" class="form-control">
+                    <option id="business_category" value="select">select</option><hr>
+                    <option id="business_category" value="manufacturing">Manufacturing</option>
+                    <option id="business_category" value="service">Service</option>
+                  </select>
+                  <br>
+                  <span>Business PAN/CIN/Udyam Number : </span>
+                  <select name="business_number" id="business_number" class="form-control">
+                    <option value="select">Select</option><hr>
+                    <option id="business_number" value="pan">PAN</option>
+                    <option id="business_number" value="pan">CIN</option>
+                    <option id="business_number" value="pan">Udyam Number</option>
+                  </select><br>
+                  <input type="text" name="business_number" id="business_number" class="form-control" placeholder="Enter Your PAN/CIN/Udyam Number" oninput="valid_name(this)">
+                  <br>
+                  <span>Owner Full Name</span>
+                  <input type="text" name="owner_name" id="owner_name" class="form-control" placeholder="Enter Owner Full Name" oninput="valid_name(this)"><br>
+                  <span>Owner PAN Number</span>
+                  <input type="text" name="owner_pan" id="owner_pan" class="form-control" placeholder="Enter Owner PAN Number" oninput="valid_name(this)"><br>
+                  <span>Owner Aadhar Number</span>
+                  <input type="number" name="owner_aadhar" id="owner_aadhar" class="form-control" placeholder="Enter Aadhar Number" oninput="valid_name(this)"><br>
+  
+                  <span>GP/MC No Objection Certificate</span>
+                  <input type="file" name="gp_mcp_noObj_certificate" id="gp_mcp_noObj_certificate" class="form-control">
+                  <br>
+                  <span>Upload Owner Profile Photo</span>
+                  <input type="file" name="profile_photo" id="profile_photo" class="form-control">
+                  <br>
+                  <span>Required Available Services : </span>
+                  <input type="checkbox" name="servies" id="services" value="cheque_book">
+                  <span for="cheque_book">Cheque Book</span>
+                  <input type="checkbox" name="servies" id="services" value="atm_card">
+                  <span for="atm_card">ATM Card</span>
+                  <input type="checkbox" name="servies" id="services" value="credit_card">
+                  <span for="credit_card">Credit Card</span><br><br>
+                  <button class="btn btn-primary text-center">Submit</button>
+                </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 <footer>
   <div class="container text-center">
