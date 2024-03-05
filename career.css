@@ -33,15 +33,15 @@ body{
     text-decoration: underline;
 }
 .left-bar{
-  flex : 1;
+  /* flex : 1; */
   font-family: Jost, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 150px;
+  /* padding: 0px 150px; */
 }
 .right-bar{
-  flex : 1;
+  /* flex : 1; */
   display: flex;
   flex-direction: column;
   padding: 20px 120px;
