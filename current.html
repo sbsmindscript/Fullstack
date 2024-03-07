@@ -171,7 +171,7 @@
           
             <div id="menu2" class="tab-pane fade">
               <div class="container-fluid">
-                <form class="form-group" style="line-height: 3rem;">
+                <form class="form-group" style="line-height: 3rem;" method="post" action="current_data.php">
                   <span>Enter Business Name</span>
                   <input type="text" name="business_name" id="business_name" class="form-control" placeholder="Enter Business Name" oninput="valid_name(this)"><br>
                   <span>Business Category : </span>
@@ -182,11 +182,11 @@
                   </select>
                   <br>
                   <span>Business PAN/CIN/Udyam Number : </span>
-                  <select name="business_number" id="business_number" class="form-control">
+                  <select name="business_card_type" id="business_number" class="form-control">
                     <option value="select">Select</option><hr>
                     <option id="business_number" value="pan">PAN</option>
-                    <option id="business_number" value="pan">CIN</option>
-                    <option id="business_number" value="pan">Udyam Number</option>
+                    <option id="business_number" value="cin">CIN</option>
+                    <option id="business_number" value="udyam number">Udyam Number</option>
                   </select><br>
                   <input type="text" name="business_number" id="business_number" class="form-control" placeholder="Enter Your PAN/CIN/Udyam Number" oninput="valid_name(this)">
                   <br>
@@ -204,13 +204,13 @@
                   <input type="file" name="profile_photo" id="profile_photo" class="form-control">
                   <br>
                   <span>Required Available Services : </span>
-                  <input type="checkbox" name="servies" id="services" value="cheque_book">
+                  <input type="checkbox" name="cheque_book" id="services" value="cheque_book">
                   <span for="cheque_book">Cheque Book</span>
-                  <input type="checkbox" name="servies" id="services" value="atm_card">
+                  <input type="checkbox" name="atm_card" id="services" value="atm_card">
                   <span for="atm_card">ATM Card</span>
-                  <input type="checkbox" name="servies" id="services" value="credit_card">
+                  <input type="checkbox" name="credit_card" id="services" value="credit_card">
                   <span for="credit_card">Credit Card</span><br><br>
-                  <button class="btn btn-primary text-center">Submit</button>
+                  <input type="submit" name="current_info" class="btn btn-primary" value="submit">
                 </form>
                 </div>
               </div>

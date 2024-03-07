@@ -16,11 +16,11 @@
 		</tr>
 
 		<?php
-	$con=mysqli_connect("localhost","root","","bank");
+			$con=mysqli_connect("localhost","root","","bank");
 
- 	$query=mysqli_query($con,"SELECT * FROM saving_account");
+			$query=mysqli_query($con,"SELECT * FROM saving_account");
 
-	while($data=mysqli_fetch_array($query)){
+			while($data=mysqli_fetch_array($query)){
 		?>
 
 		<tr>
