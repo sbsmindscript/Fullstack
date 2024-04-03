@@ -2,10 +2,39 @@
 <html>
 <head>
 	<title>Angular JS Session</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
 
 	<center><h2>Basic Angular Js Session</h2></center>
+	<center>
+	<form ng-controller="myCtrl">
+		<label>Enter 1 st No</label>
+		<input type="text" ng-model="myno1" ng-keyup="add()">
+		<br><br>
+		<label>Enter 2nd No</label>
+		<input type="text" ng-model="myno2" ng-keyup="add()">
+		<br><br>
+		Res : <input type="text" value="{{res}}">
+	</form>
+</center>
+<br><br><br>
+	
+	<center>
+	<form ng-controller="myCtrls">
+		<label>Enter 1 st No</label>
+		<input type="text" ng-model="my1" ng-keyup="add()">
+		<br><br>
+		<label>Enter 2nd No</label>
+		<input type="text" ng-model="my2" ng-keyup="add()">
+		<br><br>
+		Res : <input type="text" value="{{ress}}">
+	</form>
+</center>
 
 </body>
 </html>
+
+
+<script src="app.js"></script>
+<script src="app2.js"></script>
