@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Routing</title>
+
+</head>
+<body ng-app="myApp">
+
+<center>
+<a href="#/!">Home</a>&nbsp;
+
+<a href="#!dashboard">Dashboard</a>&nbsp;
+<a href="#!login">Login</a>
+
+<center><h3>Default page is Home: Routing.html</h3></center>
+</center>
+
+<div ng-view></div>
+
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "routing.html"
+    })
+    .when("/dashboard", {
+        templateUrl : "dashboard.html",
+        controller : "dashboardCtrl"
+    })
+    .when("/login", {
+        templateUrl : "login.html",
+        controller : "loginCtrl"
+    });
+});
+app.controller("dashboard", function ($scope) {
+    $scope.msg = "Page is dashboard";
+});
+app.controller("loginCtrl", function ($scope) {
+    $scope.msg = "Login Page";
+});
+
+</script>

@@ -1,0 +1,45 @@
+<div class="container mycss" >
+ <fieldset>
+   <legend>Login Form</legend>
+     <form class="form-group" method="post" ng-submit="save()">
+        <label>Enter Username:</label><br>
+        <input type="text" ng-model="member.names" class="form-control" required=""><br>
+	    <label>Enter Password:</label><br>
+        <input type="password" ng-model="member.pass" class="form-control" required=""><br>
+        <input type="submit" name="submit" class="btn btn-primary">
+    </form>
+    <p id="good"></p>
+  </fieldset>
+</div>
+
+<h3 class="text-center">{{message}}</h3>
+
+
+<div class="container">
+  <button class="btn btn-danger" ng-click="deleteAll()">Delete All</button>
+  <br><br>
+    <div class="table-responsive" ng-init="showMe()"> 
+        <table class="table table-bordered"> 
+           <thead>
+                 <tr>
+                  <th><input type="checkbox" ng-model="checkAll" ng-change="toggleAll()"></th>
+                  <th>ID</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Delete</th>
+                  <th>Edit</th>
+                 </tr>
+                </thead>
+                  <tbody>
+                   <tr ng-repeat="data in catlist">
+                    <td><input type="checkbox" ng-model="data.Selected" ng-change="toggleOne()"></td>
+                     <th>{{data.id}}</th>
+                     <th>{{data.username}}</th>
+                     <th>{{data.password}}</th>
+                     <th><button class="btn btn-danger btn-xs" ng-click="del_reviewer(data.id)">Delete</button></th>
+                     <th><button class="btn btn-danger btn-xs" ng-click="edit_reviewer(data.id)">Edit</button></th>
+                    </tr>
+                   </tbody>
+           </table>
+        </div>
+  </div>
