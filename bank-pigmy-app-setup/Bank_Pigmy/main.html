@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="dashboard" ng-app="myApp" ng-controller="myCtrl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agent Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="app/assets/images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link href="app/assets/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+    <link href="app/assets/vendor/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app/assets/css/style.css">
+    <!-- angular CDN -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script> 
+    <script src="app/assets/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="app/assets/js/dirPaginate.js"></script>
+    <script type="text/javascript" src="app/assets/js/angucomplete-alt.js"></script>
+
+    <script src="app/app.js"></script>    
+    <script src="app/pages/dashboard/dashboard.js"></script>
+    <script src="app/pages/customer/customer.js"></script>
+    <script src="app/pages/dailysaving/dailysaving.js"></script>
+</head>
+
+<body>
+
+<div id="preloader">
+    <i>.</i>
+    <i>.</i>
+    <i>.</i>
+</div>
+
+<div id="main-wrapper">
+
+    <div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="header-content">
+                    <div class="header-left">
+                        <div class="brand-logo"><a class="mini-logo" href="#"><img src="app/assets/images/logoi.png" alt=""
+                                    width="40"></a></div>
+                        <div class="search">
+                            <form action="#">
+                                <div class="input-group"><input type="text" class="form-control"
+                                        placeholder="Search Here..."><span class="input-group-text px-12"><i
+                                            class="ri-search-line"></i></span></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="dark-light-toggle"><span class="dark"><i class="ri-moon-line"></i></span><span class="light"><i class="ri-sun-line"></i></span>
+                        </div>
+                        
+                    <div class="dropdown profile_log dropdown">
+                            <div data-bs-toggle="dropdown">
+                                <div class="user icon-menu active"><span class="thumb"></span></div>
+                            </div>
+                            <div tabindex="-1" role="menu" aria-hidden="true"
+                                class="dropdown-menu dropdown-menu dropdown-menu-right">
+                                <div class="user-email">
+                                    <div class="user"><span class="thumb"></span>
+                                        <div>
+                                            <h5>{{users}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a class="dropdown-item ps-20 pe-20 pt-10 pb-10 d-flex align-items-center border-top  undefined"
+                                    href="#">
+                                    <span class="fs-18 text-primary me-10">
+                                    <i class="ri-user-line"></i></span>Profile</a>
+                                    <a ng-click="logout()" class="dropdown-item ps-20 pe-20 pt-10 pb-10 d-flex align-items-center border-top  text-danger"
+                                    href="#"><span class="fs-18 text-primary me-10">
+                                    <i class="ri-logout-circle-line"></i></span>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- sidebar -->
+<div class="sidebar">
+    <div class="brand-logo text-center">
+    <a class="mini-logo" href="#"><img src="app/assets/images/logoi.png" alt="Admin" width="30"></a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li class="undefined">
+                <a href="#!/dashboard"><span><i class="ri-grid-fill"></i></span><span class="nav-text">Dashboard</span></a>
+            </li>
+            <li class="undefined">
+                <a href="#!/customer"><span><i class="ri-user-3-fill"></i></span><span
+                        class="nav-text">Customer</span>
+                    </a>
+                </li>
+            <li class="undefined">
+                <a href="#!/daily"><span><i class="ri-hand-coin-fill"></i></span>
+                    <span class="nav-text">Collection</span>
+                </a>
+         </li>
+        </ul>
+    </div>
+</div>
+
+
+    <div class="content-body">
+        <div class="container">
+            <div class="page-title">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-6">
+                        <div class="page-title-content">
+                            <h3>Welcome</h3>
+                            <p class="mb-2">{{users}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+            
+            <div ng-view></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="app/assets/vendor/jquery/jquery.min.js"></script>
+<script src="app/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="app/assets/js/scripts.js"></script>
+</body>
+</html>
