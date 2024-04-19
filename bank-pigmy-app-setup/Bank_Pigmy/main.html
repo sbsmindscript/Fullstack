@@ -11,6 +11,8 @@
     <link href="app/assets/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="app/assets/vendor/select2/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="app/assets/css/style.css">
+    <link rel="stylesheet" href="app/assets/css/overlay.css">
+    <!-- angular CDN -->
     <!-- angular CDN -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script> 
@@ -25,7 +27,13 @@
 </head>
 
 <body>
-
+<!-- custom loader -->
+<div id="overlay">
+   <div class="cv-spinner">
+   <span class="spinner"></span>
+  </div>
+</div>
+<!-- end loader div -->
 <div id="preloader">
     <i>.</i>
     <i>.</i>
