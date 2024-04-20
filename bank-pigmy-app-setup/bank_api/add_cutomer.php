@@ -5,13 +5,13 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-   $customer_name = $_POST['customer_name'];
+   $cust_name= $_POST['cust_name'];
    $location = $_POST['location'];
-   $mobile_no = $_POST['mobile_no'];
-   $bussiness_name = $_POST['bussiness_name'];
-   $bussiness_proof = $_POST['bussiness_proof'];
+   $mob = $_POST['mob'];
+   $business_name = $_POST['business_name'];
+   $business_proof = $_POST['business_proof'];
    $agent_id=$_POST['agent_id']; 
-   $sql="INSERT INTO customers(customer_name,location,mobile_no,bussiness_name,bussiness_proof)VALUES ('$customer_name','$location','$mobile_no','$bussiness_name','$bussiness_proof')";
+   $sql="INSERT INTO customers(cust_name,location,mobile_no,bussiness_name,bussiness_proof,under_agent_id)VALUES ('$cust_name','$location','$mob','$business_name','$business_proof','$agent_id')";
 
    $result = $conn->query($sql)or die("Error in Selecting " . mysqli_error($conn));
 
