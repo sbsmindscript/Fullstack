@@ -1,5 +1,6 @@
 <div class="conatiner" data-ng-init="init()">
     
+<<<<<<< Updated upstream
     <div class="row">
     <div class="col-lg-6">
         <form method="post" role="member" enctype="multipart/form-data" id="userForm" name="StudentForm" ng-submit="save_customers()">
@@ -104,3 +105,109 @@
   <!--  -->
   </div>
   </div>
+=======
+  <div class="row">
+  <div class="col-lg-6">
+      <form method="post" role="member" enctype="multipart/form-data" id="userForm" name="StudentForm" ng-submit="save_customers()">
+          
+          <div class="mb-3">
+            <label style="color: #000;">Customer Name</label>
+            <input type="text" name="custName" class="form-control" ng-model="member.cust_name" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{1,60}$/" style="border: 1px solid red;">
+            <span style="color:red" ng-show="StudentForm.custName.$dirty && StudentForm.custName.$invalid" class="ng-hide">Please Enter Valid Full Name.</span>
+          </div>
+
+          <div class="mb-3">
+            <label style="color: #000;">Select Location</label>
+            <select ng-model="member.location" class="form-control" style="border: 1px solid red;">
+              <option value="" selected="" disabled="">Select Location</option>
+              <option ng-repeat="location in locationData" value="{{location.location_name}}">{{location.location_name}}</option>
+            </select>
+          </div>
+
+
+          <div class="mb-3" hidden="">
+              <label  style="color: #000;">Agent Email</label>
+              <input type="email" ng-model="member.agent_email" required class="form-control" style="border: 1px solid red;">
+          </div>
+          
+
+          <div class="mb-3" hidden="">
+              <label class="form-label" style="color: #000;">Agent ID</label>
+              <input type="text" class="form-control" ng-model="member.agent_id" required="" style="border: 1px solid red;">
+          </div>
+
+          <div class="mb-3">
+              <label style="color: #000;">Customer Mobile No.</label>
+              <input type="text" class="form-control" ng-model="member.mob" name="mobileno" ng-pattern="/^[7-9][0-9]{9}$/" maxlength="10" required="" style="border: 1px solid red;">
+              <span style="color:red" ng-show="StudentForm.mobileno.$dirty && StudentForm.mobileno.$invalid" class="ng-hide">Enter 10 Digit Valid Mobile Number</span>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label" style="color: #000;">Business Name</label>
+              <input type="text" class="form-control" ng-model="member.business_name" required="" style="border: 1px solid red;">
+          </div>
+
+          <div class="mb-3">
+            <label style="color: #000;">Business Proof</label>
+              <select class="form-control" required="" ng-model="member.business_proof" style="border: 1px solid red;">
+                <option value="" selected="" disabled="">Select Business Proof</option>
+                <option value="Aadhar">Aadhar</option>
+                <option value="Voter ID">Voter ID</option>
+                 <option value="Ele.Bill">Electricity Bill</option>
+              </select>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label" style="color: #000;">Upload Business Proof</label>
+              <input g-model="member.image" type="file" id="photo" required="" class="form-control" accept="image/*" capture="camera" onchange="angular.element(this).scope().uploadedFile(this)" style="border: 1px solid red;">
+              
+              <br>
+              <div id="imgs">
+                <img ng-src="{{image_source}}" class="img-responsive" style="width: 50px;height:50px;margin-left: 20%">
+              </div>
+          </div>
+
+          <br>
+
+          <div class="mb-3">
+            <input type="submit" class="btn btn-primary btn btn-lg" value="Submit Details" ng-disabled="StudentForm.$invalid">
+          </div>
+          </form>
+        </div>
+        <!--  -->
+  <div class="col-sm-6">
+  <h4 class="text-center">View All Customers</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <th>Sr</th>
+        <th>Cust.Name</th>
+        <th>Acc.no</th>
+        <th>location</th>
+        <th>mobile_no</th>
+        <th>Buss.Name</th>
+        <th>Status</th>
+      </tr>
+      <tr ng-repeat="x in customerData">
+        <th>{{x.cust_id}}</th>
+        <th>{{x.cust_name}}</th>
+        
+        <th ng-show="x.account_no!=NULL" style="color: green">{{x.account_no}}</th>
+
+        <th ng-show="x.account_no==NULL" style="color: red">In Process</th>
+
+        <th>{{x.location}}</th>
+        <th>{{x.mobile_no}}</th>
+        <th>{{x.bussiness_name}}</th>
+        
+        <th ng-show="x.bank_approval_status=='0'" style="color:red;">Inactive</th>
+        <th ng-show="x.bank_approval_status=='1'" style="color:green;">Active</th>
+      
+      </tr>
+    </table>
+  </div>
+</div>
+<!--  -->
+</div>
+</div>
+>>>>>>> Stashed changes
