@@ -1,7 +1,5 @@
 <?php
 include("config.php");
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST');
 //create an array
   $memberinfo = array();
   
@@ -16,9 +14,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
      $new_profle_pic = time().'.'.$phototest1;
 
-     $location = "upload/".$new_profle_pic;
+     $locations = "upload/".$new_profle_pic;
 
-     $file_extension = pathinfo($location, PATHINFO_EXTENSION);
+     $file_extension = pathinfo($locations, PATHINFO_EXTENSION);
      $file_extension = strtolower($file_extension);
 
        $cust_name= $_POST['cust_name'];
@@ -32,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
       $reg_date=date('d-m-Y');
 
 if(in_array($file_extension,$valid_ext)){  
-  compressedImage($_FILES['image']['tmp_name'],$location,60);
+  compressedImage($_FILES['image']['tmp_name'],$locations,60);
   
   $sql="INSERT INTO customers(image,cust_name,location,under_agent_email,agent_id,mobile_no,bussiness_name,bussiness_proof,registration_date) VALUES('$new_profle_pic','$cust_name','$location','$under_agent_email','$agent_id','$mobile_no','$business_name','$business_proof','$reg_date')";
 
