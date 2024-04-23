@@ -10,8 +10,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    $mob = $_POST['mob'];
    $business_name = $_POST['business_name'];
    $business_proof = $_POST['business_proof'];
+   $agent_email=$_POST['agent_email'];
    $agent_id=$_POST['agent_id']; 
-   $sql="INSERT INTO customers(cust_name,location,mobile_no,bussiness_name,bussiness_proof,under_agent_id)VALUES ('$cust_name','$location','$mob','$business_name','$business_proof','$agent_id')";
+
+   $sql="INSERT INTO customers(cust_name,location,mobile_no,bussiness_name,bussiness_proof,under_agent_email,agent_id)VALUES ('$cust_name','$location','$mob','$business_name','$business_proof','$agent_email','$agent_id')";
 
    $result = $conn->query($sql)or die("Error in Selecting " . mysqli_error($conn));
 
