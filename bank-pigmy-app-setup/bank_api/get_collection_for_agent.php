@@ -12,15 +12,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $result = $conn->query($sql)or die("Error in Selecting " . mysqli_error($conn));
 
-if ($result->num_rows > 0) {    
-while($row = $result->fetch_assoc()) {
-    $userinfo[] = $row;	
-}
-} else {
-$userinfo[] ="No record found";	
-}
-
-echo json_encode($userinfo);
+	if ($result) {    
+        while($row=$result->fetch_assoc()){
+			$userinfo[]=$row;
+		}
+		
+	} else {
+		$userinfo[] ="Sorry";	
+	}
+	
+	echo json_encode($userinfo);
 }
 
 $conn->close();
