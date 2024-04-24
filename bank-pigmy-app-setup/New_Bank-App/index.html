@@ -39,7 +39,7 @@
                             <form method="post" ng-submit="login()">
                             <div class="row">
                               <div class="col-12 mb-16"><label class="form-label">Email ID</label>
-                                <input name="email" type="text" class="form-control" required="" ng-model="member.username">
+                                <input type="text" class="form-control" required="" ng-model="member.username" ng-keyup="check_verification()">
                                 </div>
                                 
                                 <div class="col-12 mb-16">
@@ -70,38 +70,100 @@
 var app = angular.module('myApp', []);
 app.controller('loginCtrl', function($scope,$window,$http,$location) {
 
+
+
+  $scope.check_verification=function(){
+  
+  $scope.myemail=$scope.member.username;
+  console.log($scope.myemail);
+
+       
+  $http({
+          method  : 'POST',
+           url    :  'http://localhost/bank_api/check_agent_verification.php',
+           data    :  $.param({ 'agent_own_email' : $scope.myemail}),
+                  headers : {'Content-Type': 'application/x-www-form-urlencoded'}          
+                 })
+                .then(function (response) {
+                  console.log(response.data);
+                if(response.data[0] == "Success"){
+                        swal({
+                          title: "Verification is pending.",
+                          text: "Kindly contact your bank.",
+                          icon: "warning"
+                          })
+                    $scope.member.username="";
+                          
+                     }else{
+                          
+
+                      }
+
+                  })  
+          }
+
+
      $scope.login=function(){
      $scope.memberdata = JSON.stringify($scope.member);
       $("#overlay").fadeIn(300);
+      $scope.myemail=$scope.member.username;
+      console.log($scope.myemail);
+
 
       $http({
           method  : 'POST',
-          url     : 'http://localhost/bank_api/agent_login.php',
-          data    :  $scope.member,          
-          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
-            })      
-              .then(function (response) {
-                console.log(response.data);
-                  if(response.data['STATUS'] == "Success"){
+           url    :  'http://localhost/bank_api/check_agent_verification.php',
+           data    :  $.param({ 'agent_own_email' : $scope.myemail}),
+                  headers : {'Content-Type': 'application/x-www-form-urlencoded'}          
+                 })
+                .then(function (response) {
+                  console.log(response.data);
+                if(response.data[0] == "Success"){
+                        swal({
+                          title: "Verification is pending.",
+                          text: "Kindly contact your bank.",
+                          icon: "warning"
+                          })
+                    $scope.member.username="";
+                          
+                     }else{
 
-                    $scope.user=response.data[0].email_id;
+                      $http({
+                  method  : 'POST',
+                  url     : 'http://localhost/bank_api/agent_login.php',
+                  data    :  $scope.member,          
+                  headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })      
+                      .then(function (response) {
+                        console.log(response.data);
+                          if(response.data['STATUS'] == "Success"){
 
-                    $scope.users=localStorage.setItem('username',$scope.user);
+                            $scope.user=response.data[0].email_id;
 
-                   window.location.href ="http://localhost:4000/main";
-                    $("#overlay").fadeOut(300);
-                 
-                  }else{
+                            $scope.users=localStorage.setItem('username',$scope.user);
 
-                     swal({
-                      title: "oops.",
-                      text : "Authentication Failed.",
-                      icon: "warning",
-                      dangerMode: true,
-                    })
-                   
-                  }
-              })
+                           window.location.href ="http://localhost:4000/main";
+                            $("#overlay").fadeOut(300);
+                         
+                          }else{
+
+                             swal({
+                              title: "oops.",
+                              text : "Authentication Failed.",
+                              icon: "warning",
+                              dangerMode: true,
+                            })
+                           
+                          }
+                      })
+                                  
+
+                      }
+
+                  })
+
+
+      
           }
 
 });
