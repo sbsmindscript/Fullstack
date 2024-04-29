@@ -46,15 +46,21 @@ angular.module('myApp.customer', ['ngRoute'])
         
         
           $http({
-               method  : 'GET',
-               url     :  SERVERURL+'view_customers.php'
-          
-            })      
-              .then(function (response) {
-                console.log(response.data);
-               $scope.customerData = response.data;
+              method  : 'POST',
+              url     : SERVERURL+'view_customer_of_agent.php',
+              data    :  $.param({ 'email' : $scope.users}),
+              headers : {'Content-Type': 'application/x-www-form-urlencoded'}          
+                })
+                 .then(function (response) {
+                 console.log(response.data);
+
+                   setTimeout(function(){
+                    $("#overlay").fadeOut(300);
+                    },500);
+
+                   $scope.customerData=response.data;
                 
-              })
+            })
 
         //init closed below         
         }
@@ -159,8 +165,19 @@ $scope.save_customers = function() {
                'Content-Type': undefined
         }
        }).then(function (response) {
-           console.log(response.data);
+          console.log(response.data);
            if(response.data[0] == "Success"){
+
+                   $http({
+                         method  : 'POST',
+                          url   :  SERVERURL+'send_sms.php',
+                         data    :  $.param({ 'cname' : $scope.member.cust_name, 'mb' : $scope.member.mob}),         
+                         headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                        })      
+                        .then(function (response) {
+                         console.log(response.data);
+                            
+                        })
                 swal({
                      text: "Details Saved..!",
                      icon: "success",
