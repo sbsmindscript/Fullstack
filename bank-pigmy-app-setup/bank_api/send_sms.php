@@ -32,7 +32,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => json_encode($fields),
   CURLOPT_HTTPHEADER => array(
-    "authorization: PASTE_API_KEY",
+    "authorization: YOUR_API_KEY",
     "accept: */*",
     "cache-control: no-cache",
     "content-type: application/json"
