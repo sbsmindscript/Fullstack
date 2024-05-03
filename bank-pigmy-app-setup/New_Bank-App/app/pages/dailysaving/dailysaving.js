@@ -38,11 +38,11 @@ angular.module('myApp.dailysaving', ['ngRoute'])
                 $scope.member.agent_email=response.data[0].email_id;
                 $scope.member.agent_id=response.data[0].agent_id;
            
-                swal({
-                      title: "Geo Location is Enabled.",
-                      icon: "success",
-                      dangerMode: false,
-                    })
+                // swal({
+                //       title: "Geo Location is Enabled.",
+                //       icon: "success",
+                //       dangerMode: false,
+                //     })
 
                    setTimeout(function(){
                     $("#overlay").fadeOut(300);
@@ -164,9 +164,75 @@ $scope.search_acc_no=function(){
 
           $scope.request_change=function(saving_id){
 
-            $scope.userId=saving_id;
-            alert($scope.userId);
+                $("#overlay").fadeIn(300);
 
-          }
+                     $scope.member={};
+
+                      $scope.id = saving_id;
+
+             $http({
+                     method  : 'POST',
+                     url     :  SERVERURL+'get_amount_by_id.php',
+                     data    :  $.param({'id' : $scope.id}),         
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                  })     
+                 .then(function (response) {
+                  console.log(response.data);
+
+                   $scope.member.id = response.data[0].saving_id;
+                   $scope.member.cust_name = response.data[0].customer_full_name;
+                   $scope.member.acc_no = response.data[0].cust_account_no;
+                   $scope.member.amounts = response.data[0].amount;
+
+                    setTimeout(function(){
+                    $("#overlay").fadeOut(300);
+                    },500);
+                
+                  })
+            }
+
+
+            $scope.update_amount = function(){
+                    
+                  $scope.memberinfo = JSON.stringify($scope.member);
+                  $http({
+                    method:'POST',
+                    url:SERVERURL+'update_amount.php',
+                    data:$scope.member,
+                    headers:{'Content-Type':'application/x-www-form-urlencoded'}  
+                  })
+                    .then(function(response){
+                      $scope.data=response.data;
+                      console.log($scope.data);
+                      //console.log(response.data[0]);
+                      if(response.data[0]=='Success'){
+
+                        swal({
+                             title: "Updated Successful..!",
+                             icon: "success",
+                            dangerMode: true,
+                             })
+
+                          $('#exampleModal').modal('hide');
+                          $scope.init();
+                          $('#updateForm').find('input').val('');
+                          $('#updateForm').find('select').val('');
+                          
+                          
+                          }
+                          
+                      if(response.data[0]=='Sorry'){
+
+                        swal({
+                             title: "Error..!",
+                             icon: "warning",
+                            dangerMode: true,
+                             })
+                      
+                      }
+                    })
+
+                 }
+
 
 });//close controller

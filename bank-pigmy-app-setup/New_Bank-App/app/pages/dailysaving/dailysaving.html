@@ -77,12 +77,12 @@
 					<th ng-if="data.saving_id<=0">{{data.id}}</th>
 					<th>{{data.cust_account_no}}</th>
 					<th>{{data.customer_full_name}}</th>
-					<th ng-if="data.change_request=='1'" style="background-color: red">{{data.amount}}</th>
+					<th ng-if="data.change_request=='1'" style="color: orange">{{data.amount}}</th>
 					
 					<th ng-if="data.change_request=='0'">{{data.amount}}</th>
 
 					<th>{{data.entry_date |date:'d-MMM-yyyy'}}</th>
-					<th><button type="button" class="btn btn-success" ng-click="request_change(data.saving_id)">Edit</button></th>
+					<th><button type="button" class="btn btn-success" ng-click="request_change(data.saving_id)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></th>
 				</tr>
 			</table>
 		</div>
@@ -90,3 +90,45 @@
 <!-- row closed below -->
 </div>
 </form>
+
+<!-- pop up // Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Amount</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form ng-submit="update_amount()" id="updateForm" method="post" role="member">
+
+          <div class="mb-3">
+            <label for="acc_no" class="col-form-label">Acc.No :</label>
+            <input type="hidden" ng-model="member.id" required="" readonly="">
+            <input type="text" ng-model="member.acc_no" required="" class="form-control" readonly="">
+          </div>
+
+          <div class="mb-3">
+            <label for="cust_name" class="col-form-label">Customer:</label>
+            <input type="text" ng-model="member.cust_name" required="" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label for="amount" class="col-form-label">Amount:</label>
+            <input type="text" ng-model="member.amounts" required="" class="form-control" >
+          </div>
+
+          <div class="mb-3 ms-auto">
+         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%">Update</button>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
