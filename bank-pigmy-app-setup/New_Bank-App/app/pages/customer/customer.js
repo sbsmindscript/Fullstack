@@ -1,6 +1,6 @@
 'use strict';
 
- var SERVERURL="http://localhost/bank_api/";
+var SERVERURL="http://localhost/bank_api/";
 
 angular.module('myApp.customer', ['ngRoute'])
 

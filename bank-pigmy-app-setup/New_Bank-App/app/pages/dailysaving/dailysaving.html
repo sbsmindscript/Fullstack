@@ -12,17 +12,17 @@
 		<button type="button" class="btn btn-success btn btn-lg" style="margin-top: 10px;margin-left: 20%" ng-click="search_acc_no()">Search Acc No</button>
 	</div>
 
-	<div class="col-sm-6" style="color: black">
+	<div class="col-sm-6" style="color: black" hidden="">
 		<label>Latitude</label>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-6" hidden="">
 		<input type="text" ng-model="member.latitude" required="" class="form-control" style="border: 1px solid black">
 	</div>
 
-	<div class="col-sm-6" style="color: black">
+	<div class="col-sm-6" style="color: black" hidden="">
 		<label>Longitude</label>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-6" hidden="">
 		<input type="text" ng-model="member.longitude" required="" class="form-control" style="border: 1px solid black">
 	</div>
 
@@ -42,17 +42,17 @@
 		<input type="number" min="1" oninput="validity.valid||(value='');" ng-model="member.amount" required="" class="form-control" style="border: 1px solid black">
 	</div>
 
-	<div class="col-sm-6" style="color: black">
+	<div class="col-sm-6" style="color: black" hidden="">
 		<label>Agent mail</label>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-6" hidden="">
 		<input type="email" ng-model="member.agent_email" required="" class="form-control" style="border: 1px solid black">
 	</div>
 
-	<div class="col-sm-6" style="color: black">
+	<div class="col-sm-6" style="color: black" hidden="">
 		<label>Agent ID</label>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-6" hidden="">
 		<input type="text" ng-model="member.agent_id" required="" class="form-control" style="border: 1px solid black">
 	</div>
 	<br>

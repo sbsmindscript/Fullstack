@@ -128,7 +128,7 @@ app.controller('loginCtrl', function($scope,$window,$http,$location) {
                           
                      }else{
 
-                      $http({
+             $http({
                   method  : 'POST',
                   url     : 'http://localhost/bank_api/agent_login.php',
                   data    :  $scope.member,          
@@ -161,8 +161,6 @@ app.controller('loginCtrl', function($scope,$window,$http,$location) {
                       }
 
                   })
-
-
       
           }
 

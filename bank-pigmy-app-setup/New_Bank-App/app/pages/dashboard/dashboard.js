@@ -1,3 +1,7 @@
+'use strict';
+
+var SERVERURL="http://localhost/bank_api/";
+
 angular.module('myApp.dashboard', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -8,6 +12,10 @@ angular.module('myApp.dashboard', ['ngRoute'])
 }])
  .controller('DashboardCtrl', function($scope, $http, $window) {
   
+   $scope.init=function(){
+    
+    $("#overlay").fadeIn(300);
+
   $http({
               method  : 'POST',
               url     : SERVERURL+'total_saving_under_agent.php',
@@ -78,6 +86,12 @@ angular.module('myApp.dashboard', ['ngRoute'])
                    $scope.TodayTransactionCount=response.data.length;
                 
             })
+
+              setTimeout(function(){
+               $("#overlay").fadeOut(300);
+               },500);
+
+        }
  
 
 });//close controller
