@@ -162,7 +162,7 @@ $scope.search_acc_no=function(){
           }
 
 
-          $scope.request_change=function(saving_id){
+            $scope.request_change=function(saving_id){
 
                 $("#overlay").fadeIn(300);
 
@@ -233,6 +233,5 @@ $scope.search_acc_no=function(){
                     })
 
                  }
-
 
 });//close controller

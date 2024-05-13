@@ -1,6 +1,6 @@
 'use strict';
 
-var SERVERURL="http://localhost/bank_api/";
+ var SERVERURL="http://localhost/bank_api/";
 
 angular.module('myApp.customer', ['ngRoute'])
 
@@ -165,19 +165,8 @@ $scope.save_customers = function() {
                'Content-Type': undefined
         }
        }).then(function (response) {
-          console.log(response.data);
+           console.log(response.data);
            if(response.data[0] == "Success"){
-
-                   $http({
-                         method  : 'POST',
-                          url   :  SERVERURL+'send_sms.php',
-                         data    :  $.param({ 'cname' : $scope.member.cust_name, 'mb' : $scope.member.mob}),         
-                         headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
-                        })      
-                        .then(function (response) {
-                         console.log(response.data);
-                            
-                        })
                 swal({
                      text: "Details Saved..!",
                      icon: "success",
@@ -203,5 +192,32 @@ $scope.save_customers = function() {
                  
              });
          }
+
+
+             $scope.checkmobile=function(){
+             $scope.mobileno=$scope.member.mob;
+       
+       $http({
+               method  : 'POST',
+               url     :  SERVERURL+'check_dup_mobile.php',
+               data    :  $.param({ 'mobilenumber' : $scope.mobileno}), //forms user object
+                  headers : {'Content-Type': 'application/x-www-form-urlencoded'}          
+                 })
+                .then(function (response) {
+                if(response.data[0] == "Success"){
+                        swal({
+                          title: "Enter New Mobile Number.",
+                          text: "Mobile Number Already Registered.",
+                          icon: "warning"
+                          })
+                    $scope.member.mob="";
+                          
+                     }else{
+                          
+
+                      }
+
+                  })  
+          } 
 
 });//close controller

@@ -32,7 +32,7 @@
 
             <div class="mb-3">
                 <label style="color: #000;">Customer Mobile No.</label>
-                <input type="text" class="form-control" ng-model="member.mob" name="mobileno" ng-pattern="/^[7-9][0-9]{9}$/" maxlength="10" required="" style="border: 1px solid red;">
+                <input type="text" class="form-control" ng-model="member.mob" name="mobileno" ng-pattern="/^[7-9][0-9]{9}$/" maxlength="10" required="" ng-keyup="checkmobile()" style="border: 1px solid red;">
                 <span style="color:red" ng-show="StudentForm.mobileno.$dirty && StudentForm.mobileno.$invalid" class="ng-hide">Enter 10 Digit Valid Mobile Number</span>
             </div>
 
@@ -94,7 +94,7 @@
           <th>{{x.location}}</th>
           <th>{{x.mobile_no}}</th>
           <th>{{x.bussiness_name}}</th>
-          <th><img src="https://agent.kalapith.org/bank_api/upload/{{x.image}}" style="width: 20px;height: 20px"></th>
+          <th><img src="http://localhost/bank_api/upload/{{x.image}}" style="width: 20px;height: 20px"></th>
           
           <th ng-show="x.bank_approval_status=='0'" style="color:red;">Inactive</th>
           <th ng-show="x.bank_approval_status=='1'" style="color:green;">Active</th>

@@ -4,7 +4,8 @@ angular.module('myApp', [
   'ngRoute',  
   'myApp.dashboard',
   'myApp.customer',
-  'myApp.dailysaving'
+  'myApp.dailysaving',
+  'myApp.reports'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   

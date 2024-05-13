@@ -62,6 +62,7 @@
 	</div>
 	<!-- sm-6 closed -->
 	<div class="col-sm-6">
+		 <h4 class="text-center">View All Collection</h4>
 		<div class="table-responsive">
 			<table class="table table-bordered">
 				<tr>
@@ -77,7 +78,7 @@
 					<th ng-if="data.saving_id<=0">{{data.id}}</th>
 					<th>{{data.cust_account_no}}</th>
 					<th>{{data.customer_full_name}}</th>
-					<th ng-if="data.change_request=='1'" style="color: orange">{{data.amount}}</th>
+					<th ng-if="data.change_request=='1'" style="color:orange;border: 3px solid red">{{data.amount}}</th>
 					
 					<th ng-if="data.change_request=='0'">{{data.amount}}</th>
 
@@ -91,7 +92,6 @@
 </div>
 </form>
 
-<!-- pop up // Modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

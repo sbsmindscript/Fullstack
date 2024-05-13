@@ -14,12 +14,19 @@
     <link href="app/assets/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="app/assets/vendor/select2/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="app/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/overlay.css">
     <!-- Angular CDN -->
     <script src="app/assets/js/angular.min.js"></script>
     <script src="app/assets/js/angular-route.js"></script>
 </head>
 
 <body class="dashboard" ng-app="myApp" ng-controller="loginCtrl">
+<!-- custom loader -->
+<div id="overlay">
+   <div class="cv-spinner">
+   <span class="spinner"></span>
+  </div>
+</div>
 
 <div id="preloader">
     <i>.</i>
@@ -39,7 +46,7 @@
                             <form method="post" ng-submit="login()">
                             <div class="row">
                               <div class="col-12 mb-16"><label class="form-label">Email ID</label>
-                                <input type="text" class="form-control" required="" ng-model="member.username" ng-keyup="check_verification()">
+                                <input name="email" type="text" class="form-control" required="" ng-model="member.username" ng-keyup="check_verification()">
                                 </div>
                                 
                                 <div class="col-12 mb-16">
@@ -70,6 +77,16 @@
 var app = angular.module('myApp', []);
 app.controller('loginCtrl', function($scope,$window,$http,$location) {
 
+  if (localStorage.getItem('username') !== null) {
+    $("#overlay").fadeIn(300);
+     setTimeout(function(){
+      $("#overlay").fadeOut(300);
+      window.location.href ="http://localhost:4000/main";
+      },500);
+    
+  } else {
+    console.log('Session is not available');
+  }
 
 
   $scope.check_verification=function(){
@@ -95,13 +112,9 @@ app.controller('loginCtrl', function($scope,$window,$http,$location) {
                     $scope.member.username="";
                           
                      }else{
-                          
-
                       }
-
-                  })  
-          }
-
+                    })  
+                  }
 
      $scope.login=function(){
      $scope.memberdata = JSON.stringify($scope.member);
@@ -163,6 +176,5 @@ app.controller('loginCtrl', function($scope,$window,$http,$location) {
                   })
       
           }
-
 });
 </script>

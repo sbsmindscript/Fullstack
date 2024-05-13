@@ -24,6 +24,7 @@
     <script src="app/pages/dashboard/dashboard.js"></script>
     <script src="app/pages/customer/customer.js"></script>
     <script src="app/pages/dailysaving/dailysaving.js"></script>
+    <script src="app/pages/reports/reports.js"></script>
 </head>
 
 <body>
@@ -48,15 +49,12 @@
             <div class="col-xxl-12">
                 <div class="header-content">
                     <div class="header-left">
-                        <div class="brand-logo"><a class="mini-logo" href="#"><img src="app/assets/images/logoi.png" alt=""
-                                    width="40"></a></div>
-                        <div class="search">
-                            <form action="#">
-                                <div class="input-group"><input type="text" class="form-control"
-                                        placeholder="Search Here..."><span class="input-group-text px-12"><i
-                                            class="ri-search-line"></i></span></div>
-                            </form>
-                        </div>
+                        <div class="brand-logo">
+                         <a class="mini-logo" href="#">
+                        <img src="app/assets/images/logoi.png" alt="Logo" width="40">
+                    </a>
+                    </div>
+                        
                     </div>
                     <div class="header-right">
                         <div class="dark-light-toggle"><span class="dark"><i class="ri-moon-line"></i></span><span class="light"><i class="ri-sun-line"></i></span>
@@ -112,7 +110,12 @@
                 <a href="#!/daily"><span><i class="ri-hand-coin-fill"></i></span>
                     <span class="nav-text">Collection</span>
                 </a>
-         </li>
+            </li>
+            <li class="undefined">
+                <a href="#!/reports"><span><i class="ri-user-3-fill"></i></span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
@@ -123,7 +126,7 @@
             <div class="page-title">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-6">
-                        <div class="page-title-content">
+                        <div class="page-title-content text-center">
                             <h3>Welcome</h3>
                             <p class="mb-2">{{users}}</p>
                         </div>
