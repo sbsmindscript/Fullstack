@@ -6,24 +6,25 @@ include("config.php");
  
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {	 
-   
 
-    $from_dt = date('d-m-Y', strtotime($_POST['from_dt']));
-    $to_date = date('d-m-Y', strtotime($_POST['to_date']));
+    $agent_email=$_POST['email'];
+    $agent_id=$_POST['agent_id'];
+    $account_no=$_POST['account_no'];
     
-    $sql="SELECT * FROM savings WHERE entry_date BETWEEN '$from_dt' AND '$to_date'";
+    $sql="SELECT * FROM savings WHERE agent_email='$agent_email' AND agent_id='$agent_id' AND cust_account_no='$account_no' ORDER BY saving_id desc";
 
     $result = $conn->query($sql)or die("Error in Selecting " . mysqli_error($conn));
 
-if ($result->num_rows > 0) {    
-while($row = $result->fetch_assoc()) {
-    $userinfo[] = $row;	
-}
-} else {
-$userinfo[] ="No record found";	
-}
-
-echo json_encode($userinfo);
+    if ($result) {    
+        while($row=$result->fetch_assoc()){
+			$userinfo[]=$row;
+		}
+		
+	} else {
+		$userinfo[] ="Sorry";	
+	}
+	
+	echo json_encode($userinfo);
 }
 
 $conn->close();

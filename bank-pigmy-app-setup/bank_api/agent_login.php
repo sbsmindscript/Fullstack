@@ -11,8 +11,8 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	 
-	$email=$_POST['username'];
-	$pass=$_POST['password']; 
+	$email=$conn->real_escape_string($_POST['username']);
+	$pass=$conn->real_escape_string($_POST['password']); 
 	
  $sql="SELECT * FROM agents WHERE email_id='$email' AND auth_password='$pass' ";    //general sql statement
 
