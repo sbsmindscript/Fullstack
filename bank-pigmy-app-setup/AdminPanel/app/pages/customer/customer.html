@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-lg-12">
+        <h4 class="text-center" style="color: #000; font-weight: 500;">View All Customer</h4>
+        <div class="table-responsive">
+        <table class="table table-bordered">
+            <tr>
+                <th>Sr</th>
+                <th>Cust.Name</th>
+                <th>Acc.no</th>
+                <th>location</th>
+                <th>mobile_no</th>
+                <th>Buss.Name</th>
+                <th>Proof Image</th>
+                <th>Status</th>
+            </tr>
+            <tr ng-repeat="x in customerData">
+            <th>{{x.cust_id}}</th>
+            <th>{{x.cust_name}}</th>
+            
+            <th ng-show="x.account_no!=NULL" style="color: green">{{x.account_no}}</th>
+
+            <th ng-show="x.account_no==NULL" style="color: red">In Process</th>
+
+            <th>{{x.location}}</th>
+            <th>{{x.mobile_no}}</th>
+            <th>{{x.bussiness_name}}</th>
+            <th><img src="http://localhost/bank_api/upload/{{x.image}}" style="width: 20px;height: 20px"></th>
+            
+            <th ng-show="x.bank_approval_status=='0'" style="color:red;">Inactive</th>
+            <th ng-show="x.bank_approval_status=='1'" style="color:green;">Active</th>
+            
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>

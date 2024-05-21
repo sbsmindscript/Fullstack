@@ -1,0 +1,72 @@
+<div class="container-fluid" style="overflow: hidden;">
+    <div class="row">
+        <h4 style="color: #000; font-weight: 500; margin-left: 40px;">Add New Agent</h4>
+        <div  class="col-lg-3 col-md-3 col-sm-12 col-12" style="position: relative; left: 20px;">
+            <form method="post" role="member" enctype="multipart/form-data" id="userForm" name="StudentForm" ng-submit="save_agents()" style="line-height: 2.5;">
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Agent's Name</label>
+                    <input type="text" ng-model="member.agent_name" placeholder="Enter Agent Name" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Bank ID</label>
+                    <input type="text" ng-model="member.bank_id" placeholder="Enter Bank ID" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Agent's Mobile NO</label>
+                    <input type="text" ng-model="member.mobile" placeholder="Enter Agent's Mobile NO" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Agent's Address</label>
+                    <input type="text" ng-model="member.agent_add" placeholder="Enter Agent's Address" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Agent's Email-ID</label>
+                    <input type="text" ng-model="member.agent_email" placeholder="Enter Agent's Email-ID" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label" style="color: #000; font-weight:500">Date of Joining</label>
+                    <input type="date" ng-model="member.agent_DOJ" placeholder="Enter Agent's Email-ID" class="form-control">
+                </div>
+                <div style="margin-top: 10px;">
+                    <input type="button" value="Submit" class="btn btn-success btn-lg">
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+            <h4 class="text-center" style="color: #000; font-weight: 500;">View All Agents</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Sr</th>
+                  <th>Agent.Name</th>
+                  <th>Bank_ID</th>
+                  <th>Mobile No</th>
+                  <th>Agent Address</th>
+                  <th>Agent Email</th>
+                  <th>Date-Of-Joining</th>
+                  <th>Status</th>
+                </tr>
+                <tr ng-repeat="x in customerData">
+                  <th>{{x.cust_id}}</th>
+                  <th>{{x.cust_name}}</th>
+                  
+                  <th ng-show="x.account_no!=NULL" style="color: green">{{x.account_no}}</th>
+        
+                  <th ng-show="x.account_no==NULL" style="color: red">In Process</th>
+        
+                  <th>{{x.location}}</th>
+                  <th>{{x.mobile_no}}</th>
+                  <th>{{x.bussiness_name}}</th>
+                  <th><img src="http://localhost/bank_api/upload/{{x.image}}" style="width: 20px;height: 20px"></th>
+                  
+                  <th ng-show="x.bank_approval_status=='0'" style="color:red;">Inactive</th>
+                  <th ng-show="x.bank_approval_status=='1'" style="color:green;">Active</th>
+                
+                </tr>
+              </table>
+            </div>
+          </div>
+
+    </div>
+</div>
