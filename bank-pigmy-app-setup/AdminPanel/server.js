@@ -12,6 +12,11 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/main', function(req, res) {
+   // console.log("Server Start");
+    res.sendFile(path.join(__dirname + '/main.html'));
+});
+
 app.listen(port, (err) => {  
   if (err) {
     return console.log('something bad happened', err)
